@@ -1,0 +1,1227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memorandum</title>
+    <link rel="icon" href="/images/ncslogo.ico" type="image/x-icon">
+
+    <link href="//fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,700;1,400;1,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
+    <link rel="stylesheet" href="/css/style-starter.css">
+    <link rel="stylesheet" href="/css/footer.css">
+    <link rel="stylesheet" href="/css/memorandum.css">
+    <link rel="stylesheet" href="/css/facebook-header.css">
+-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memorandum</title>
+    <link rel="icon" href="/images/ncslogo.ico" type="image/x-icon">
+
+    <!-- Google Fonts -->
+    <link href="//fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,700;1,400;1,600&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- Template CSS -->
+    <link rel="stylesheet" href="/css/style-starter.css">
+    <link rel="stylesheet" href="/css/footer.css">
+    <link rel="stylesheet" href="/css/memorandum.css">
+    <link rel="stylesheet" href="/css/facebook-header.css">
+</head>
+<style>
+    body {
+        position: relative;
+        /* Remove the direct background from body */
+    }
+
+    /* Create a pseudo-element for the watermark background */
+    body::before {
+        content: "";
+        position: fixed; /* Fixed ensures it stays in place during scroll */
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: url("/images/LOGO NEWWWWWWW.jpg") no-repeat center center;
+        background-size: contain; /* or cover, depending on your preference */
+        background-attachment: fixed;
+        opacity: 0.04; /* Slightly higher opacity to see through navbar */
+        z-index: 9998; /* Above content but below navbar (navbar is z-index: 9999) */
+        pointer-events: none; /* Ensures it doesn't interfere with user interactions */
+    }
+
+    /* Make sure the header has proper fixed positioning */
+    #site-header {
+        background-color: #063FA1 !important;
+        z-index: 9999 !important;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        transition: all 0.3s ease;
+    }
+
+    /* Alternative approach - if you want the logo to repeat as a pattern */
+    body::after {
+        content: "";
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: url("/images/LOGO NEWWWWWWW.jpg") repeat;
+        background-size: 200px 200px; /* Adjust size as needed */
+        opacity: 0.03; /* Even lower opacity for repeated pattern */
+        z-index: -2;
+        pointer-events: none;
+        display: none; /* Enable this if you want the repeated pattern instead */
+    }
+</style>
+<body>
+    <!--/Header-->
+    <header id="site-header" class="fixed-top">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light stroke py-lg-0">
+                <h1>
+                    <img src="/images/dmmc.jpg" alt="DMMC IHS Logo" style="height: 30px;"> <!-- Adjust height as needed -->
+                    <img src="/images/LOGO NEWWWWWWW.jpg" alt="NSC SL Logo" style="height: 30px;"> <!-- Adjust height as needed -->
+                    <a class="navbar-brand pe-xl-5 pe-lg-4" href="index.html">
+                        <span class="sublog">NSC</span>SL
+                    </a>
+                </h1>
+                <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon fa icon-expand fa-bars"></span>
+                    <span class="navbar-toggler-icon fa icon-close fa-times"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarScroll">
+                    <ul class="navbar-nav me-lg-auto my-2 my-lg-0 navbar-nav-scroll">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="event.html">Events</a>
+                        </li>
+
+                        <!--
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Other Pages
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="resources.html">Resources</a></li>
+                                <li><a class="dropdown-item" href="#">Blog Post</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="#">Separated Link</a></li>
+                            </ul>
+                        </li>
+                        -->
+
+                        <li class="nav-item">
+                            <a class="nav-link active" href="resources.html">Resources</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="announcement.html">Announcements</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contact</a>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav ms-auto align-items-center">
+                        <li class="nav-item d-flex align-items-center">
+                            <a class="nav-link d-flex align-items-center" href="https://www.facebook.com/p/Southern-Luzon-NSC-100064428682142/" target="_blank" title="Follow us on Facebook">
+                                <i class="fab fa-facebook-f me-2" style="color: white; font-size: 18px;"></i>
+                                <span class="text-white">NSC Southern Luzon</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- toggle switch for light and dark theme 
+                <div class="mobile-position">
+                    <nav class="navigation">
+                        <div class="theme-switch-wrapper">
+                            <label class="theme-switch" for="checkbox">
+                                <input type="checkbox" id="checkbox">
+                                <div class="mode-container">
+                                    <i class="gg-sun"></i>
+                                    <i class="gg-moon"></i>
+                                </div>
+                            </label>
+                        </div>
+                    </nav>
+                </div>
+
+                -->
+                <!-- //toggle switch for light and dark theme -->
+            </nav>
+        </div>
+    </header>
+
+    <!-- breadcrumb -->
+    <section class="w3l-about-breadcrumb">
+        <div class="breadcrumb-bg breadcrumb-bg-about">
+            <div class="container py-lg-5 py-sm-4">
+                <div class="w3breadcrumb-gids text-center">
+                    <div class="w3breadcrumb-info mt-5">
+                        <h2 class="w3ltop-title pt-4">Memorandums</h2>
+                        <!--
+                        <ul class="breadcrumbs-custom-path">
+                            <li><a href="index.html">Home</a></li>
+                            <li class="active"><span class="fas fa-angle-double-right mx-2"></span> About </li>
+                        </ul>
+                        -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="w3l-products w3l-faq-block py-5" id="projects">
+        <div class="container py-md-5 py-2">
+            <!-- Redesigned Tabs System -->
+            <div class="year-tabs-container">
+                <!-- Decade dropdown for mobile/simpler navigation -->
+                <div class="decade-dropdown">
+                    <select class="decade-select" id="decadeSelect" onchange="filterYearsByDecade(this.value)">
+                        <option value="all">All Years</option>
+                        <option value="2020s">2020s</option>
+                        <option value="2010s">2010s</option>
+                    </select>
+                </div>
+                
+                <!-- Year tabs -->
+                <div class="year-tabs" id="yearTabs">
+                    <button class="year-tab active" data-year="2025" data-decade="2020s">2025</button>
+                    <button class="year-tab" data-year="2024" data-decade="2020s">2024</button>
+                    <button class="year-tab" data-year="2023" data-decade="2020s">2023</button>
+                    <button class="year-tab" data-year="2022" data-decade="2020s">2022</button>
+                    <button class="year-tab" data-year="2021" data-decade="2020s">2021</button>
+                    <button class="year-tab" data-year="2020" data-decade="2020s">2020</button>
+                    <button class="year-tab" data-year="2019" data-decade="2010s">2019</button>
+                    <button class="year-tab" data-year="2018" data-decade="2010s">2018</button>
+                    <button class="year-tab" data-year="2017" data-decade="2010s">2017</button>
+                    <button class="year-tab" data-year="2016" data-decade="2010s">2016</button>
+                    <button class="year-tab" data-year="2015" data-decade="2010s">2015</button>
+                    <button class="year-tab" data-year="2014" data-decade="2010s">2014</button>
+                </div>
+                
+                <!-- Tab content -->
+                <div class="tab-content">
+                    <!-- 2025 Content -->
+                    <div class="tab-pane fade show active" id="tab2025">
+                        <ul class="resources-list">
+                            <li>
+                                <span class="memo-id">MEMO 2025-01-07-001</span>
+                                <a href="/files/2025/NSCSL - MEMO 2025-01-07-001 Membership Data Update 2025.pdf" class="resources-link" target="_blank">Membership Data Update 2025</a>
+                            </li>
+                            <li>
+                                <span class="memo-id">MEMO 2025-01-07-002</span>
+                                <a href="/files/2025/NSCSL - MEMO 2025-01-07-002 Protocol in Sending NBS Samples Using Accredited Couriers.pdf" class="resources-link" target="_blank">Protocol in Sending NBS Samples Using Accredited Couriers</a>
+                            </li>
+                            <li>
+                                <span class="memo-id">MEMO 2025-01-07-003</span>
+                                <a href="/files/2025/NSCSL - MEMO 2025-01-07-003 FILTER CARD MONITORING.docx" class="resources-link" target="_blank">Filter Card Monitoring</a>
+                            </li>
+                            <li>
+                                <span class="memo-id">MEMO 2025-01-24-004</span>
+                                <a href="/files/2025/NSCSL - MEMO 2025-01-24-004.pdf" class="resources-link" target="_blank">Proper Collection of NBS Sample Quality Blood Spot Via Zoom</a>
+                            </li>
+                            <li>
+                                <span class="memo-id">MEMO 2025-03-25-006</span>
+                                <a href="/files/2025/NSCSL - MEMO 2025-03-25-006 HOLIDAYS FOR THE MONTH OF APRIL.docx" class="resources-link" target="_blank">Holidays For The Month of April</a>
+                            </li>
+                            <li>
+                                <span class="memo-id">MEMO 2025-03-27-007</span>
+                                <a href="/files/2025/NSCSL - MEMO 2025-03-27-007 PNB MOBILE BANGKING TRANSACTION V2.docx" class="resources-link" target="_blank">PNB Mobile Banking Transaction</a>
+                            </li>
+                            <li>
+                                <span class="memo-id">MEMO 2025-01-07-003</span>
+                                <a href="/files/2025/NSCSL - MEMO 2025-01-07-003 - Request for Newborn Screening Monitoring.pdf" class="resources-link" target="_blank">Request for Newborn Screening Monitoring</a>
+                            </li>
+                            <li>
+                                <span class="memo-id">MEMO 2025-01-13-001</span>
+                                <a href="/files/2025/NSCSL MEMO 2025-01-13-001 - REITERATION ON COURIER REIMBURSEMENT.pdf" class="resources-link" target="_blank">Reiteration of Courier Reimbursement</a>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <!-- 2024 Content -->
+                    <div class="tab-pane fade" id="tab2024">
+                        <ul class="resources-list">
+                            <li>
+                                <span class="memo-id">MEMO 2024-01-04-001</span>
+                                <a href="/files/2024/NSCSL - MEMO 2024-01-04-001 Membership Data Update.pdf" class="resources-link" target="_blank">Membership Data Update 2024</a>
+                            </li>
+                            <li>
+                                <span class="memo-id">MEMO 2024-01-17-002</span>
+                                <a href="/files/2024/NSCSL - MEMO 2024-01-17-002 - PROTOCOL FOR MIXED FEEDING (SOY OR TPN IN COMBINATION WITH BREAST OR LACTOSE FEEDING).pdf" class="resources-link" target="_blank">Protocol for Mixed Feeding</a>
+                            </li>
+                            <li>
+                                <span class="memo-id">MEMO 2024-01-24-003</span>
+                                <a href="/files/2024/NSCSL - MEMO 2024-01-24-003 CHINESE NEW YEAR.pdf" class="resources-link" target="_blank">Chinese New year</a>
+                            </li>
+                            <li>
+                                <span class="memo-id">MEMO 2024-01-26-004</span>
+                                <a href="/files/2024/NSCSL - MEMO 2024-01-24-003 CHINESE NEW YEAR.pdf" class="resources-link" target="_blank">Repeat Collection and Card Replacement</a>
+                            </li>
+                            <li>
+                                <span class="memo-id">MEMO 2024-01-31-005</span>
+                                <a href="/files/2024/NSCSL - MEMO 2024-01-31-005 REITERATION  Replacement of Filter Card Schedule.pdf" class="resources-link" target="_blank">Reiteration Replacement of Filter Card Schedule</a>
+                            </li>
+                            <li>
+                                <span class="memo-id">MEMO 2024-02-13-006</span>
+                                <a href="/files/2024/NSCSL - MEMO 2024-02-13-006 NEW CHECK DESIGN.pdf" class="resources-link" target="_blank">New Check Design</a>
+                            </li>
+                            <li>
+                                <span class="memo-id">MEMO 2024-03-04-007</span>
+                                <a href="/files/2024/NSCSL - MEMO 2024-03-04-007 HOLY WEEK MEMO.pdf" class="resources-link" target="_blank">Holy Week Memo</a>
+                            </li>
+                            <li>
+                                <span class="memo-id">MEMO 2024-03-15-008</span>
+                                <a href="/files/2024/NSCSL - MEMO 2024-03-15-008  DATA VERIFICATION FORM.pdf" class="resources-link" target="_blank">Data Verification Form</a>
+                            </li>
+                            <li>
+                                <span class="memo-id">MEMO 2024-04-02-009</span>
+                                <a href="/files/2024/NSCSL - MEMO 2024-04-02-009 G6PD MEMO.pdf" class="resources-link" target="_blank">G6PD Memo</a>
+                            </li>
+                            <li>
+                                <span class="memo-id">MEMO 2024-4-05-010</span>
+                                <a href="/files/2024/NSCSL - MEMO 2024-4-05-010 DAY OF VALOR.pdf" class="resources-link" target="_blank">Day of Valor</a>
+                            </li>
+                            <li>
+                                <span class="memo-id">MEMO 2024-05-16-011</span>
+                                <a href="/files/2024/NSCSL - MEMO 2024-05-16-011 NO OFFICE DAY - MAY 26, 2024.pdf" class="resources-link" target="_blank">DMMC IHS Letter No Office Day - MAY 26, 2024</a>
+                            </li>
+                            <li>
+                                <span class="memo-id">MEMO 2024-04-29-012</span>
+                                <a href="/files/2024/NSCSL - MEMO 2024-04-29-012 LABOR DAY.pdf" class="resources-link" target="_blank">Labor Day</a>
+                            </li>
+                            <li>
+                                <span class="memo-id">MEMO 2024-05-16-013</span>
+                                <a href="/files/2024/NSCSL - MEMO 2024-05-16-013 PROPER COLLECTION GOOD QUALITY DRIED BLOOD SPOTS.pdf" class="resources-link" target="_blank">Proper Collection Good Quality Dried Blood Spots</a>
+                            </li>
+                            <li>
+                                <span class="memo-id">MEMO 2024-05-23-014</span>
+                                <a href="/files/2024/NSCSL - MEMO 2024-05-23-014  NSF REFUSAL FORM.pdf" class="resources-link" target="_blank">NSF Refusal Form</a>
+                            </li>
+                            <li>
+                                <span class="memo-id">MEMO 2024-06-05-015</span>
+                                <a href="/files/2024/NSCSL - MEMO 2024-06-05-015 JUNE HOLIDAY.pdf" class="resources-link" target="_blank">June Holiday</a>
+                            </li>
+                            <li>
+                                <span class="memo-id">MEMO 2024-08-08-018</span>
+                                <a href="/files/2024/NSCSL - MEMO 2024-08-08-018  AUGUST HOLIDAY.pdf" class="resources-link" target="_blank">August Holiday</a>
+                            </li>
+                            <li>
+                                <span class="memo-id">MEMO 2024-10-21-014</span>
+                                <a href="/files/2024/NSCSL - MEMO 2024-10-21-014 October and November 2024 Holiday.PDF" class="resources-link" target="_blank">October and November Holiday</a>
+                            </li>
+                            <li>
+                                <span class="memo-id">MEMO 2024-12-16-022</span>
+                                <a href="/files/2024/NSCSL - MEMO 2024-12-16-022 NSCSL Lopez Extension Office Schedule for December 17-19, 2024.pdf" class="resources-link" target="_blank">NSCSL Lopez Extension Office Schedule for December 17-19, 2024</a>
+                            </li>
+                            <li>
+                                <span class="memo-id">NSCSL Memo</span>
+                                <a href="/files/2024/NSCSL - Memo to Courier on Claimng of Damages and Losses.pdf" class="resources-link" target="_blank">Courier on Claimng of Damages and Losses</a>
+                            </li>
+                            <li>
+                                <span class="memo-id">MEMO 2024-05-31-013</span>
+                                <a href="/files/2024/~$CSL - MEMO- 2024-05-31-013 PAG- UULIT NG MEMO SA PAGLALAGAY NG PANGALAN NG KUMUHA NG NBS SPEC. SA FILTER CARD.docx" class="resources-link" target="_blank">Paglalagay ng Pangalan ng Kumuha ng NBS Spec. sa Filter Card</a>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Add more year tabs (2023, 2022, etc.) with similar structure -->
+                    <div class="tab-pane fade" id="tab2023">
+                        <ul class="resources-list">
+                            <li>
+                                <span class="memo-id">MEMO 2023-01-04-001</span>
+                                <a href="/files/2023/NSCSL - MEMO 2023-01-04-001 Membership Data Update.pdf" class="resources-link" target="_blank">Membership Data Update 2023</a>
+                            </li>
+                            <li>
+                                <span class="memo-id">MEMO 2023-01-13-002</span>
+                                <a href="/files/2023/NSCSL - MEMO 2023-01-13-002 LIST OF SIGNIFICANT CLINICAL INFORMATION.pdf" class="resources-link" target="_blank">List of Significant Clinical Information</a>
+                            </li>
+                            <li>
+                                <span class="memo-id">MEMO 2023-01-24-003</span>
+                                <a href="/files/2023/NSCSL - MEMO 2023-01-24-003 Replacement of Filter Card Schedule.pdf" class="resources-link" target="_blank">Replacement of Filter Card Schedule</a>
+                            </li>
+                            <li>
+                                <span class="memo-id">MEMO 2023-03-20-004</span>
+                                <a href="/files/2023/NSCSL - MEMO 2023-03-20-004 HOLY WEEK MEMO & DAY OF VALOR.pdf" class="resources-link" target="_blank">Holy Week Memo & Day of Valor</a>
+                            </li>
+                            <li>
+                                <span class="memo-id">MEMO 2023-04-18-005</span>
+                                <a href="/files/2023/NSCSL - MEMO 2023-04-18-005 EID’L FITR (FEAST OF RAMADHAN) & LABOR DAY MEMO.pdf" class="resources-link" target="_blank">Eid'l Fitr (Feast of Ramadan) & Labor Day Memo</a>
+                            </li>
+                            <li>
+                                <span class="memo-id">MEMO 2023-05-25-006</span>
+                                <a href="/files/2023/NSCSL - MEMO 2023-05-25-006 EXPIRED FILTER CARD.pdf" class="resources-link" target="_blank">Expired Filter Card</a>
+                            </li>
+                            <li>
+                                <span class="memo-id">MEMO 2023-06-05-007</span>
+                                <a href="/files/2023/NSCSL - MEMO 2023-06-05-007 INDEPENDENCE DAY.pdf" class="resources-link" target="_blank">Independence Day</a>
+                            </li>
+                            <li>
+                                <span class="memo-id">MEMO 2023-06-16-008</span>
+                                <a href="/files/2023/NSCSL - MEMO 2023-06-16-008  EID'L ADHA.pdf" class="resources-link" target="_blank">Eid'l Adha</a>
+                            </li>
+                            <li>
+                                <span class="memo-id">MEMO 2023-06-20-009</span>
+                                <a href="/files/2023/NSCSL - MEMO 2023-06-20-009  2GO TERMINATION.pdf" class="resources-link" target="_blank">2GO Termination</a>
+                            </li>
+                            <li>
+                                <span class="memo-id">MEMO 2023-06-22-009</span>
+                                <a href="/files/2023/NSCSL - MEMO 2023-06-22-009 - CREDIT TERMS.pdf" class="resources-link" target="_blank">Credit Terms</a>
+                            </li>
+                            <li>
+                                <span class="memo-id">MEMO 2023-07-14-010</span>
+                                <a href="/files/2023/NSCSL - MEMO 2023-07-14-0010 SUBMISSION OF LETTER OF CORRECTION WITHIN ONE (1) HOUR AFTER RECALL.pdf" class="resources-link" target="_blank">Submission of Letter of Correction WIthin One (1) Hour After Recall</a>
+                            </li>
+                            <li>
+                                <span class="memo-id">MEMO 2023-07-14-011</span>
+                                <a href="/files/2023/NSCSL - MEMO 2023-07-14-0011 NEW SMART NUMBERS FOR ADMIN AND FOLLOW UP.pdf" class="resources-link" target="_blank">New Smart Numbers for Admin and Follow Up</a>
+                            </li>
+                            <li>
+                                <span class="memo-id">MEMO 2023-07-21-011</span>
+                                <a href="/files/2023/NSCSL - MEMO 2023-07-21-011 REGION IV -A G6PD CONFIRMATORY CENTERS.docx" class="resources-link" target="_blank">Region IV - A G6PD Confirmatory Centers</a>
+                            </li>
+                            <li>
+                                <span class="memo-id">MEMO 2023-07-31-013</span>
+                                <a href="/files/2023/NSCSL - MEMO 2023-07-31-013 JRS BUSINESS CORPORATION v2.pdf" class="resources-link" target="_blank">JRS Business Corporation V2</a>
+                            </li>
+                            <li>
+                                <span class="memo-id">MEMO 2023-08-03-014</span>
+                                <a href="/files/2023/NSCSL - MEMO 2023-08-03-014 AUGUST HOLIDAY.pdf" class="resources-link" target="_blank">August Holiday</a>
+                            </li>
+                            <li>
+                                <span class="memo-id">MEMO 2023-08-08-015</span>
+                                <a href="/files/2023/NSCSL - MEMO 2023-08-08-015 UPDATED CONTACT NUMBERS (Corrected Copy).pdf" class="resources-link" target="_blank">Updated Contact Numbers (Corrected Copy)</a>
+                            </li>
+                            <li>
+                                <span class="memo-id">MEMO 2023-08-08-016</span>
+                                <a href="/files/2023/NSCSL - MEMO 2023-08-08-016  MEMO ON SCAMMERS v2.pdf" class="resources-link" target="_blank">Memo on Scammers V2</a>
+                            </li>
+                            <li>
+                                <span class="memo-id">MEMO 2023-10-11-017</span>
+                                <a href="/files/2023/NSCSL - MEMO 2023-10-11-017  2023 BARANGAY ELECTION  NOVEMBER  HOLIDAY.pdf" class="resources-link" target="_blank">2023 Barangay Election November Holiday</a>
+                            </li>
+                            <li>
+                                <span class="memo-id">NSCSL - MEMO</span>
+                                <a href="/files/2023/NSCSL - MEMO JRS Gumaca and Catanauan- Schedules of Pick-up.pdf" class="resources-link" target="_blank">JRS Gumaca and Catanauan- Schedules of Pick-up</a>
+                            </li>
+                            <li>
+                                <span class="memo-id">2023-12-20-020</span>
+                                <a href="/files/2023/NSCSL - 2023-12-20-020 - Additional December Holiday Schedule 2023.pdf" class="resources-link" target="_blank">Additional December Holiday Schedule 2023</a>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="tab-pane fade" id="tab2022">
+                        <!-- 2022 content -->
+                        <ul class="resources-list">
+                            <li>
+                                <span class="memo-id">MEMO 11-19-21-020</span>
+                                <a href="/files/2022/2  MEMO  FOR OFFICIAL EMAIL ADDRESS AND CONTACT DETAILS FOR ACCOUNTING PURPOSES.pdf" class="resources-link" target="_blank">Official Email Address and Contact Detauls for Accouting Purposes</a>
+                            </li>
+                            <li>
+                                <span class="memo-id">NSCSL - MEMO</span>
+                                <a href="/files/2022/NSCSL - MEMO 2022 NATIONAL AND LOCAL ELECTIONS.pdf" class="resources-link" target="_blank">2022 National and Local Elections</a>
+                            </li>
+                            <li>
+                                <span class="memo-id">NSCSL - MEMO</span>
+                                <a href="/files/2022/NSCSL - MEMO 2022 NATIONAL AND LOCAL ELECTIONS.pdf" class="resources-link" target="_blank"> 2022 NBS Specimen Collection in NSC SL- Lopez Quezon Satelite Offoce</a>
+                            </li>
+                            <li>
+                                <span class="memo-id">MEMO 2022-01-25-001</span>
+                                <a href="/files/2022/NSCSL - MEMO 2022-01-25-001FEBRUARY HOLIDAY.pdf" class="resources-link" target="_blank"> February Holiday</a>
+                            </li>
+                            <li>
+                                <span class="memo-id">MEMO 2022-01-28-002</span>
+                                <a href="/files/2022/NSCSL - MEMO 2022-01-28-002 RECALL OF EXPIRED FILTER CARDS AND REGULAR NBS.pdf" class="resources-link" target="_blank">Recall of Expired Filter Cards and Regular NBS</a>
+                            </li>
+                            <li>
+                                <span class="memo-id">MEMO 2022-01-28-003</span>
+                                <a href="/files/2022/NSCSL - MEMO 2022-01-28-003 Membership Data Update.pdf" class="resources-link" target="_blank">Membership Data Update 2022</a>
+                            </li>
+                            <li>
+                                <span class="memo-id">MEMO 2022-02-03-004</span>
+                                <a href="/files/2022/NSCSL - MEMO 2022-02-03-004  - PNB E COLLECT.pdf" class="resources-link" target="_blank">PNB E Collect</a>
+                            </li>
+                            <li>
+                                <span class="memo-id">MEMO 2022-02-10-005</span>
+                                <a href="/files/2022/NSCSL - MEMO 2022-02-10-005 CALCULATION OF REPEAT NBS SPECIMEN COLLECTION AT THE 28th DAY OF LIFE.pdf" class="resources-link" target="_blank">Calculation of Repeat NBS Specimen Collection at the 28th Day of Life</a>
+                            </li>
+                            <li>
+                                <span class="memo-id">MEMO 2022-03-03-006</span>
+                                <a href="/files/2022/NSCSL - MEMO 2022-03-03-006 TANAUAN LOCAL HOLIDAY.pdf" class="resources-link" target="_blank">Tanauan Local Holiday</a>
+                            </li>
+                            <li>
+                                <span class="memo-id">MEMO 2022-03-24-007</span>
+                                <a href="/files/2022/NSCSL - MEMO 2022-03-24-007 RELEVANT DATA FOR GALACTOSEMIA.pdf" class="resources-link" target="_blank">Relevant Data for Galactosemia</a>
+                            </li>
+                            <li>
+                                <span class="memo-id">MEMO 2022-03-30-009</span>
+                                <a href="/files/2022/NSCSL - MEMO 2022-03-30-009 HOLY WEEK MEMO.pdf" class="resources-link" target="_blank">Holy Week Memo</a>
+                            </li>
+                            <li>
+                                <span class="memo-id">MEMO 2022-04-01-008</span>
+                                <a href="/files/2022/NSCSL - MEMO 2022-04-01-008 GUIDELINES ON THE REPLACMEENT OF FILTER CARDS.pdf" class="resources-link" target="_blank">Guidelines on the Replacement of Filter Cards</a>
+                            </li>
+                            <li>
+                                <span class="memo-id">MEMO 2022-05-04-010</span>
+                                <a href="/files/2022/NSCSL - MEMO 2022-05-04-010 MGA IMPORMASYONG HINIHINGI SA NBS FILTER CARD.pdf" class="resources-link" target="_blank">Mga Impormasyong Hinihingi sa NBS Filter Card</a>
+                            </li>
+                            <li>
+                                <span class="memo-id">MEMO 2022-05-06-011</span>
+                                <a href="/files/2022/NSCSL - MEMO 2022 NATIONAL AND LOCAL ELECTIONS.pdf" class="resources-link" target="_blank">2022 National and Local ELections</a>
+                            </li>
+                            <li>
+                                <span class="memo-id">MEMO 2022-06-21-012</span>
+                                <a href="/files/2022/NSCSL - MEMO 2022-06-21-012 REITERATION ON NEWBORN SCREENING FACILITY ACTIVE RECALL FOR HEMOGLOBINOPATHIES SCREENED POSITIVE FOR TRAITS.pdf" class="resources-link" target="_blank">Reiteration of Newborn Screening Facility Active Recall for Hemoglobinopathies Screened Positive For Traits</a>
+                            </li>
+                            <li>
+                                <span class="memo-id">MEMO 2022-06-21-013</span>
+                                <a href="/files/2022/NSCSL - MEMO 2022-06-21-013  NBS FILTER CARDS EXPIRING ON NOVEMBER 2022.pdf" class="resources-link" target="_blank">NBS Filter Cards Expiring on November 2022</a>
+                            </li>
+                            <li>
+                                <span class="memo-id">MEMO 2022-06-22-014</span>
+                                <a href="/files/2022/NSCSL - MEMO 2022-06-22-014 SIGNIFICANT CLINICAL INFORMATION METABOLIC DISORDERS.pdf" class="resources-link" target="_blank">Significant Clinical Information Metabolic Disorders</a>
+                            </li>
+                            <li>
+                                <span class="memo-id">MEMO 2022-06-27-015</span>
+                                <a href="/files/2022/NSCSL - MEMO 2022-06-27-015 DATA ERASURES.pdf" class="resources-link" target="_blank">Data Erasures</a>
+                            </li>
+                            <li>
+                                <span class="memo-id">MEMO 2022-07-12-016</span>
+                                <a href="/files/2022/NSCSL - MEMO 2022-07-12-016 SIGNIFICANT CLINICAL INFORMATION for BIOTINIDASE (BTD) DEFICIENCY SCREENING.pdf" class="resources-link" target="_blank">Significant Clinical Information for Biotinidase (BTD) Deficiency Screening</a>
+                            </li>
+                            <li>
+                                <span class="memo-id">MEMO 2022-10-05-016</span>
+                                <a href="/files/2022/NSCSL - MEMO 2022-10-05-016  Updates2 on Courier Directory for DHL and ABEST.pdf" class="resources-link" target="_blank">Updates on Courier Directory for DHL and ABEST</a>
+                            </li>
+                            <li>
+                                <span class="memo-id">MEMO 2022-10-05-016</span>
+                                <a href="/files/2022/NSCSL - MEMO 2022-10-05-016 UPDATES ON COURIER DIRECTORY 2022.pdf" class="resources-link" target="_blank">Updates on Courier Directory 2022</span></a>
+                            </li>
+                            <li>
+                                <span class="memo-id">MEMO 2022-10-18-017</span>
+                                <a href="/files/2022/NSCSL - MEMO 2022-10-18- 017 - HOLIDAYS OCTOBER & NOVEMBER 2022.pdf" class="resources-link" target="_blank">Holidays October & November 2022</span></a>
+                            </li>
+                            <li>
+                                <span class="memo-id">MEMO 2022-10-18-018</span>
+                                <a href="/files/2022/NSCSL - MEMO 2022-12-06-018 LOCAL HOLIDAYS in MAIN OFFICE.pdf" class="resources-link" target="_blank">Local Holidays in Main OFfice</span></a>
+                            </li>
+                            <li>
+                                <span class="memo-id">MEMO 2022-12-09-019</span>
+                                <a href="/files/2022/NSCSL - MEMO 2022-12-09- 019 - Closed Pouch Policy.pdf" class="resources-link" target="_blank">Closed Pouch Policy</a>
+                            </li>
+                            <li>
+                                <span class="memo-id">MEMO 2022-12-5-020</span>
+                                <a href="/files/2022/NSCSL - MEMO 2022-12-5-020 - Newborn Screening Center Southern Luzon Holiday Schedule 2022.pdf" class="resources-link" target="_blank">Newborn Screening Center Southern Luzon Holiday Schedule 2022</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="tab-pane fade" id="tab2021">
+                        <!-- 2022 content -->
+                        <ul class="resources-list">
+                            <li>
+                                <span class="memo-id">MEMO 2021-06-15-011</span>
+                                <a href="/files/2021/NSCSL - MEMO 2021-01-04-001 PREVENTION OF CONTAMINATION DUE TO ABRASION  INSECT BITES  MOLDS  GROWTH.docx" class="resources-link" target="_blank">Recall of Expired and Regular (6-TEST) Filter Cards</a>
+                            </li>
+                            <li>
+                                <span class="memo-id">MEMO 2021-01-04-001</span>
+                                <a href="/files/2021/NSCSL - MEMO 2021-01-04-001 PREVENTION OF CONTAMINATION DUE TO ABRASION  INSECT BITES  MOLDS  GROWTH.docx" class="resources-link" target="_blank">Prevention of Contamination Due to Abrasion Insect Bites Molds Growth</a>
+                            </li>
+                            <li>
+                                <span class="memo-id">MEMO 2021-01-14-002</span>
+                                <a href="/files/2021/NSCSL - MEMO 2021-01-14-002 RECALL OF EXPIRED FILTER CARDS AND REGULAR NBS.pdf" class="resources-link" target="_blank">Recall of Expired Filter Cards and Regular NBS</a>
+                            </li>
+                            <li>
+                                <span class="memo-id">MEMO 2021-01-14-003</span>
+                                <a href="/files/2021/NSCSL - MEMO 2021-01-14-003 Membership Data Update - new lettehead.pdf" class="resources-link" target="_blank">Membership Data Update 2021</a>
+                            </li>
+                            <li>
+                                <span class="memo-id">MEMO 2021-02-01-004</span>
+                                <a href="/files/2021/NSCSL - MEMO 2021-02-01-004 G6PD.docx" class="resources-link" target="_blank">G6PD</a>
+                            </li>
+                            <li>
+                                <span class="memo-id">MEMO 2021-02-19-006</span>
+                                <a href="/files/2021/NSCSL - MEMO 2021-02-19-006 NBS Sample Collection AVP (NEW).pdf NBS Sample Collection AVP (NEW)" class="resources-link" target="_blank">NBS Sample Collection AVP</a>
+                            </li>
+                            <li>
+                                <span class="memo-id">MEMO 2021-03-04-007</span>
+                                <a href="/files/2021/NSCSL - MEMO 2021-03-04-007 SUBMISSION OF LETTER OF CORRECTION WITHIN ONE (1) HOUR AFTER RECALL.pdf" class="resources-link" target="_blank">Submission of Letter of Correction Within One (1) Hour After Recall</a>
+                            </li>
+                            <li>
+                                <span class="memo-id">MEMO 2021-03-23-005</span>
+                                <a href="/files/2021/NSCSL - MEMO 2021-03-23-005 NSC SOUTHERN LUZON HOLY WEEK AND DAY OF VALOR SCHED 2021.pdf" class="resources-link" target="_blank">NSC Southern Luzon Holy Week and Day of Valor Schedule 2021</a>
+                            </li>
+                            <li>
+                                <span class="memo-id">MEMO 2021-03-26-008</span>
+                                <a href="/files/2021/NSCSL - MEMO 2021-03-26-008 NEW EMAIL ADDRESSES OF NSC-SOUTHERN LUZON.pdf" class="resources-link" target="_blank">New Email Addresses of NSC Southern Luzon</a>
+                            </li>
+                            <li>
+                                <span class="memo-id">MEMO 2021-03-29-009</span>
+                                <a href="/files/2021/NSCSL - MEMO 2021-06-15-011 RECALL OF EXPIRED AND REGULAR (6-TEST) FILTER CARDS.pdf" class="resources-link" target="_blank">Recall of Expired and Regular (6-Test) Filter Cards</a>
+                            </li>
+                            <li>
+                                <span class="memo-id">MEMO 2021-07-07-012</span>
+                                <a href="/files/2021/NSCSL - MEMO 2021-07-07-012 Reiteration of NSCSL Memorandum No. 2018-12-26-001 Incorrect Ticking of Repeat NBS Samples.pdf" class="resources-link" target="_blank">Reiteration of NSCSL Memorandum No. 2018-12-26-001 Incorrect Ticking of Repeat NBS Samples</a>
+                            </li>
+                            <li>
+                                <span class="memo-id">MEMO 2021-08-23-013</span>
+                                <a href="/files/2021/NSCSL - MEMO 2021-08-23-013 NSC- Southern Luzon Lopez, Quezon Satellite Office.jpg" class="resources-link" target="_blank">NSC- Southern Luzon Lopez, Quezon Satellite Office</a>
+                            </li>
+                            <li>
+                                <span class="memo-id">MEMO 2021-08-31-014</span>
+                                <a href="/files/2021/NSCSL - MEMO 2021-08-31-014 Closed BPI MGHI- NSCSL Account.jpg" class="resources-link" target="_blank">Closed BPI MGHI- NSCSL Account</a>
+                            </li>
+                            <li>
+                                <span class="memo-id">MEMO 2021-09-03-015</span>
+                                <a href="/files/2021/NSCSL - MEMO 2021-09-03-015 Updates on Courier Directory cover.pdf" class="resources-link" target="_blank">Updates on Courier Directory Cover</a>
+                            </li>
+                            <li>
+                                <span class="memo-id">MEMO 2021-09-13-016</span>
+                                <a href="/files/2021/NSCSL - MEMO 2021-09-13-016 RECALL OF EXPIRED FILTER CARDS AND REGULAR NBS.pdf" class="resources-link" target="_blank">Recall of Expired Filter Cards and Regular NBS</a>
+                            </li>
+                            <li>
+                                <span class="memo-id">MEMO 2021-10-25-018</span>
+                                <a href="/files/2021/NSCSL - MEMO 2021-10-25-018 CALCULATION OF REPEAT NBS SPECIMEN COLLECTION AT THE 28th DAY OF LIFE.pdf" class="resources-link" target="_blank">Calculation of Repeat NBS Specimen Collection at the 28th Day of Life</a>
+                            </li>
+                            <li>
+                                <span class="memo-id">MEMO 2021-11-23-019</span>
+                                <a href="/files/2021/NSCSL - MEMO 2021-11-23-019 PHILIPPINE NATIONAL BANK E- COLLECT OVER THE COUNTER.jpg" class="resources-link" target="_blank">Philippine National Bank E - Collect Over the Counter</a>
+                            </li>
+                            <li>
+                                <span class="memo-id">MEMO 2021-11-24-020</span>
+                                <a href="/files/2021/NSCSL - MEMO 2021-11-24-020 TSH RELEVANT INFORMATION.pdf" class="resources-link" target="_blank">TSH Relevant Information</a>
+                            </li>
+                            <li>
+                                <span class="memo-id">MEMO 2021-12-07-021</span>
+                                <a href="/files/2021/NSCSL - MEMO 2021-12-07-021 NSCSL Holiday Schedule 2021.jpg" class="resources-link" target="_blank">NSCSL Holiday Schedule 2021</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="tab-pane fade" id="tab2020">
+                        <!-- 2022 content -->
+                        <ul class="resources-list">
+                            <li>
+                                <span class="memo-id">MEMO 2020-01-22-001</span>
+                                <a href="/files/2020/NSCSL - MEMO 2020-01-22-001 TAAL VOLCANO ERUPTION ADVISORY.pdf" class="resources-link" target="_blank">Taal Volcano Eruption Advisory</a>
+                            </li>
+                            <li>
+                                <span class="memo-id">MEMO 2020-01-23-003</span>
+                                <a href="/files/2020/NSCSL - MEMO 2020-01-23-003 RETRIEVAL OF UNDETACHED PHILHEALTH STUB FROM NBS SAMPLES.pdf" class="resources-link" target="_blank">Retrieval of Undetached Philhealth Stub from NBS Samples</a>
+                            </li>
+                            <li>
+                                <span class="memo-id">MEMO 2020-01-30-002</span>
+                                <a href="/files/2020/NSCSL - MEMO 2020-01-30-002 REITERATION OF MEMO 19-04-03-008 ON CREDIT TERMS.pdf" class="resources-link" target="_blank">Reiteration of MEMO 19-04-03-008 on Credit Terms</a>
+                            </li>
+                            <li>
+                                <span class="memo-id">MEMO 2020-02-04-004</span>
+                                <a href="/files/2020/NSCSL - MEMO 2020-02-04-004 Updates on Courier Directory cover.pdf"  class="resources-link" target="_blank">Updates on Courier Directory Cover</a>
+                            </li>
+                            <li>
+                                <span class="memo-id">MEMO 2020-02-04-004</span>
+                                <a href="/files/2020/NSCSL - MEMO 2020-02-04-004 Updates on Courier Directory.pdf"  class="resources-link" target="_blank">Updates on Courier Directory</a>
+                            </li>
+                            <li>
+                                <span class="memo-id">MEMO 2020-02-04-005</span>
+                                <a href="/files/2020/NSCSL - MEMO 2020-02-04-005 Automatic Screening of Samples Collected Using 6-Test NBS.pdf"  class="resources-link" target="_blank">Automatic Screening of Samples Collected Using 6-Test NBS</a>
+                            </li>
+                            <li>
+                                <span class="memo-id">MEMO 2020-03-007</span>
+                                <a href="/files/2020/NSCSL - MEMO 2020-03-007 COVID 19 Advisory1.JPG"  class="resources-link" target="_blank">COVID 19 Advisory</a>
+                            </li>
+                            <li>
+                                <span class="memo-id">MEMO 2020-03-008</span>
+                                <a href="/files/2020/NSCSL - MEMO 2020-03-17-008 COVID 19 Advisory1-A.docx"  class="resources-link" target="_blank">COVID 19 Advisory</a>
+                            </li>
+                            <li>
+                                <span class="memo-id">MEMO 2020-03-009</span>
+                                <a href="/files/2020/NSCSL - MEMO 2020-03-17-009 COVID 19 Advisory2.pdf"  class="resources-link" target="_blank">COVID 19 Advisory</a>
+                            </li>
+                            <li>
+                                <span class="memo-id">MEMO 2020-05-05-010</span>
+                                <a href="/files/2020/NSCSL - MEMO 2020-05-05-010 REVISED PROTOCOL FOR LATE NBS SAMPLES.pdf"  class="resources-link" target="_blank">Revised Protocol for Late NBS Samples</a>
+                            </li>
+                            <li>
+                                <span class="memo-id">MEMO 2020-05-05-011</span>
+                                <a href="/files/2020/NSCSL - MEMO 2020-05-15-011 NBS FILTER CARD.pdf"  class="resources-link" target="_blank">NBS Filter Card</a>
+                            </li>
+                            <li>
+                                <span class="memo-id">MEMO 2020-06-22-013</span>
+                                <a href="/files/2020/NSCSL - MEMO 2020-06-22-013 ADDENDUM INDICATING RELEVANT.pdf"  class="resources-link" target="_blank">Addendum Indicating Relevant</a>
+                            </li>
+                            <li>
+                                <span class="memo-id">MEMO 2020-06-22-014</span>
+                                <a href="/files/2020/NSCSL - MEMO 2020-06-22-014  RECALL OF EXPIRED FILTER CARDS AND REGULAR NBS.pdf"  class="resources-link" target="_blank">Recall of Expired Filter Cards and Regular NBS</a>
+                            </li>
+                            <li>
+                                <span class="memo-id">MEMO 2020-09-015</span>
+                                <a href="/files/2020/NSCSL - MEMO 2020-09-015 NEW NSC-SL FOLLOW-UP (UNSAT) EMAIL ADDRESS - Copy.pdf"  class="resources-link" target="_blank">New NSC - SL Follow Up (UNSAT) Email Address</a>
+                            </li>
+                            <li>
+                                <span class="memo-id">MEMO 2020-10-10-016</span>
+                                <a href="/files/2020/NSCSL - MEMO 2020-10-10-016  REMINDER RECALL OF EXPIRED FILTER CARDS AND REGULAR NBS.pdf"  class="resources-link" target="_blank">Reminder Recall of Expired Filter Cards and Regular NBS</a>
+                            </li>
+                            <li>
+                                <span class="memo-id">NSCSL</span>
+                                <a href="/files/2020/nscsldirectory.pdf"  class="resources-link" target="_blank">NSC - SL Directory</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="tab-pane fade" id="tab2019">
+                        <!-- 2022 content -->
+                        <ul class="resources-list">
+                            <li>
+                                <span class="memo-id">MEMO 2019-02-06-002</span>
+                                <a href="/files/2019/NSCSL - MEMO 2019-02-06-002 No Office Day.pdf" class="resources-link" target="_blank">No Office Day</a>
+                            </li>
+                            <li>
+                                <span class="memo-id">MEMO 2019-02-28-003</span>
+                                <a href="/files/2019/NSCSL - MEMO 2019-02-28-003 Membership Data Update.pdf" class="resources-link" target="_blank">Membership Data Update</a>
+                            </li>
+                            <li>
+                                <span class="memo-id">MEMO 2019-03-01-004</span>
+                                <a href="/files/2019/NSCSL - MEMO 2019-03-01-004 Updates on Courier Directory.pdf" class="resources-link" target="_blank">Updates on Courier Directory</a>
+                            </li>
+                            <li>
+                                <span class="memo-id">MEMO 2019-03-21-008</span>
+                                <a href="/files/2019/NSCSL - MEMO 2019-03-21-008 NSC SL Holy Week Schedule.pdf" class="resources-link" target="_blank">NSC SL Holy Week Schedule</a>
+                            </li>
+                            <li>
+                                <span class="memo-id">MEMO 2019-03-19-005</span>
+                                <a href="/files/2019/NSCSL - MEMO 2019-03-19-005 Newborn Screening Facility Active Recall for Hemoglobinopathies Screened Positive for Traits.pdf" class="resources-link" target="_blank">Newborn Screening Facility Active Recall</a>
+                            </li>
+                            <li>
+                                <span class="memo-id">MEMO 2019-03-22-006</span>
+                                <a href="/files/2019/NSCSL - MEMO 2019-03-22-006 New Guidelines on Purchase of Expanded Newborn Screening Filter Cards.pdf" class="resources-link" target="_blank">New Guidelines on Purchase of Filter Cards</a>
+                            </li>
+                            <li>
+                                <span class="memo-id">MEMO 2019-04-03-008A</span>
+                                <a href="/files/2019/NSCSL - MEMO 2019-04-03-008A ON CREDIT TERMS.pdf" class="resources-link" target="_blank">On Credit Terms</a>
+                            </li>
+                            <li>
+                                <span class="memo-id">MEMO 2019-04-08-009</span>
+                                <a href="/files/2019/NSCSL - MEMO 2019-04-08-009 Card Replacement.pdf" class="resources-link" target="_blank">Card Replacement</a>
+                            </li>
+                            <li>
+                                <span class="memo-id">MEMO 2019-04-16-010</span>
+                                <a href="/files/2019/NSCSL - MEMO 2019-04-16-010 Reiteration of Memorandum No. 2015-08-04 Guidelines on the Repeat Collection.pdf" class="resources-link" target="_blank">Reiteration of Memorandum on Repeat Collection</a>
+                            </li>
+                            <li>
+                                <span class="memo-id">MEMO 2019-05-06-011</span>
+                                <a href="/files/2019/NSCSL - MEMO 2019-05-06-011 Timeliness of NBS Sample Collection and Transit ti NSC-SL.pdf" class="resources-link" target="_blank">Timeliness of NBS Sample Collection</a>
+                            </li>
+                            <li>
+                                <span class="memo-id">MEMO 2019-07-08-012</span>
+                                <a href="/files/2019/NSCSL - MEMO 2019-07-08-012 TOP 3 CAUSES OF CONTAMINATED SAMPLES .pdf" class="resources-link" target="_blank">Top 3 Causes of Contaminated Samples</a>
+                            </li>
+                            <li>
+                                <span class="memo-id">MEMO 2019-07-11-013</span>
+                                <a href="/files/2019/NSCSL - MEMO 2019-07-11-013 Adequacy of NBS Blood Sample for Expanded Newborn Screening.pdf" class="resources-link" target="_blank">Adequacy of NBS Blood Sample</a>
+                            </li>
+                            <li>
+                                <span class="memo-id">MEMO 2019-07-11-014</span>
+                                <a href="/files/2019/NSCSL - MEMO 2019-07-11-014 Mga Impormasyong Hinihingi sa NBS Filter Card.pdf" class="resources-link" target="_blank">Mga Impormasyong Hinihingi sa NBS Filter Card</a>
+                            </li>
+                            <li>
+                                <span class="memo-id">MEMO 2019-08-13-015</span>
+                                <a href="/files/2019/NSCSL - MEMO 2019-08-13-015 Call for Nomination NBS awards 2019.pdf" class="resources-link" target="_blank">Call for Nomination NBS Awards 2019</a>
+                            </li>
+                            <li>
+                                <span class="memo-id">MEMO 2019-08-13-016</span>
+                                <a href="/files/2019/NSCSL - MEMO 2019-08-13-016 PAG-UULIT NG MEMORANDUM SA PAGLALAGAY NG PANGALAN NG.pdf" class="resources-link" target="_blank">Pag-uulit ng Memorandum</a>
+                            </li>
+                            <li>
+                                <span class="memo-id">MEMO 2019-10-25-17</span>
+                                <a href="/files/2019/NSCSL - MEMO 2019-10-25-17 NEW ADMIN TELEFAX NUMBER.pdf" class="resources-link" target="_blank">New Admin Telefax Number</a>
+                            </li>
+                            <li>
+                                <span class="memo-id">MEMO 2019-12-05-18</span>
+                                <a href="/files/2019/NSCSL - MEMO 2019-12-05-18 Christmas Holiday 2019.pdf" class="resources-link" target="_blank">Christmas Holiday 2019</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="tab-pane fade" id="tab2018">
+                        <!-- 2022 content -->
+                        <ul class="resources-list">
+                            <li>
+                                <span class="memo-id">NSCSL</span>
+                                <a href="/files/2018/case review form for PSQM.pdf" class="resources-link" target="_blank">Case Review Form for PSQM</a>
+                            </li>
+                            <li>
+                                <span class="memo-id">NSCSL</span>
+                                <a href="/files/2018/courier reimbursement.pdf" class="resources-link" target="_blank">Courier Reimbursement</a>
+                            </li>
+                            <li>
+                                <span class="memo-id">NSCSL</span>
+                                <a href="/files/2018/Memo re Submission of Case Review Form.pdf" class="resources-link" target="_blank">Submission of Case Review Form</a>
+                            </li>
+                            <li>
+                                <span class="memo-id">MEMO 2018-01-04-001</span>
+                                <a href="/files/2018/NSCSL - MEMO 2018-01-04-001 Deadline of BIR Form.pdf" class="resources-link" target="_blank">Deadline of Submission of Courier Reimbursement</a>
+                            </li>
+                            <li>
+                                <span class="memo-id">MEMO 2018-02-14-002</span>
+                                <a href="/files/2018/NSCSL - MEMO 2018-01-04-002 on un-used BIR forms of facilities.pdf" class="resources-link" target="_blank">Un-released Results and Pending Confirmatory</a>
+                            </li>
+                            <li>
+                                <span class="memo-id">MEMO 2018-02-26-003</span>
+                                <a href="/files/2018/NSCSL - MEMO 2018-02-26-003 NEWBORN SCREENING CENTER- SOUTHERN LUZON HOLY WEEK SCHEDULE.pdf" target="_blank">Newborn Screening Facilities</a>
+                            </li>
+                            <li>
+                                <span class="memo-id">MEMO 2018-03-23-004</span>
+                                <a href="/files/2018/NSCSL - MEMO 2018-03-23-004 RELEASE OF SECOND COPY.pdf" class="resources-link" target="_blank">Release of NBS Results</a>
+                            </li>
+                            <li>
+                                <span class="memo-id">MEMO 2018-03-23-005</span>
+                                <a href="/files/2018/NSCSL - MEMO 2018-03-23-005 Letter of Correction with Corresponding Documentation.pdf" class="resources-link" target="_blank">Letter of Confirmation - New Format</a>
+                            </li>
+                            <li>
+                                <span class="memo-id">MEMO 2018-03-23-006</span>
+                                <a href="/files/2018/NSCSL - MEMO 2018-03-23-006 DELIVERY AND RECEIVING OF NBS RESULT.pdf" class="resources-link" target="_blank">Delivery of Filter Cards</a>
+                            </li>
+                            <li>
+                                <span class="memo-id">MEMO 2018-05-11-008</span>
+                                <a href="/files/2018/NSCSL - MEMO 2018-05-11-008 Indicating the Name of NBS Specimen Collector in the Filter Card.pdf" class="resources-link" target="_blank">Indicators of a Contaminated NBS Sample</a>
+                            </li>
+                            <li>
+                                <span class="memo-id">MEMO 2018-05-23-009</span>
+                                <a href="/files/2018/NSCSL - MEMO 2018-05-23-009 2GO EXPRESS INC..pdf" class="resources-link" target="_blank">Expanded NBS Fees</a>
+                            </li>
+                            <li>
+                                <span class="memo-id">MEMO 2018-10-03-010</span>
+                                <a href="/files/2018/NSCSL - MEMO 2018-10-03-010 Reiteration of Memorandum no. 2016-05-12-009 INDICATING RELEVANT.pdf" class="resources-link" target="_blank">Reiteration of Memo on Incomplete Demographic Data</a>
+                            </li>
+                            <li>
+                                <span class="memo-id">MEMO 2018-10-03-011</span>
+                                <a href="/files/2018/NSCSL - MEMO 2018-10-03-011 Submission of Case Review Form1.pdf" class="resources-link" target="_blank">Submission of Confirmatory Result Form 1</a>
+                            </li>
+                            <li>
+                                <span class="memo-id">MEMO 2018-10-03-011</span>
+                                <a href="/files/2018/NSCSL - MEMO 2018-10-03-011 Submission of Case Review Form2.pdf" class="resources-link" target="_blank">Submission of Confirmatory Result Form 2</a>
+                            </li>
+                            <li>
+                                <span class="memo-id">MEMO 2018-12-13-012</span>
+                                <a href="/files/2018/NSCSL - MEMO 2018-12-07-012 Holiday Schedule.pdf" class="resources-link" target="_blank">Holiday Schedule</a>
+                            </li>
+                            <li>
+                                <span class="memo-id">MEMO 2018-12-26-001</span>
+                                <a href="/files/2018/NSCSL - MEMO 2018-12-26-001 Incorrect Ticking of Repeat NBS Sample.pdf" class="resources-link" target="_blank">Incorrect Date of Collection</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="tab-pane fade" id="tab2017">
+                        <!-- 2022 content -->
+                        <ul class="resources-list">
+                            <li>
+                                <span class="memo-id">MEMO 2017-01-17-001</span>
+                                <a href="/files/2017/NSCSL - MEMO 2017-01-17-001 USE OF TRANSMITTAL FORM AND FILTER CARD FOR NBS  EXPANDED NBS.docx" class="resources-link" target="_blank">Use of Transmittal Form and Filter Card for Expanded NBS</a>
+                            </li>
+                            <li>
+                                <span class="memo-id">MEMO 2017-03-28-002</span>
+                                <a href="/files/2017/NSCSL - MEMO 2017-03-28-002 NEWBORN SCREENING CENTER- SOUTHERN LUZON HOLY WEEK SCHEDULE.doc" class="resources-link" target="_blank">Holy Week Schedule - NSC-SL</a>
+                            </li>
+                            <li>
+                                <span class="memo-id">MEMO 2017-04-01-003</span>
+                                <a href="/files/2017/NSCSL - MEMO 2017-04-01-003 POLICY ON UNUSED AND EXPIRING FILTER CARDS.docx" class="resources-link" target="_blank">Policy on Unused and Expiring Filter Cards (DOCX)</a>
+                            </li>
+                            <li>
+                                <span class="memo-id">MEMO 2017-04-01-003</span>
+                                <a href="/files/2017/NSCSL - MEMO 2017-04-01-003 POLICY ON UNUSED AND EXPIRING FILTER CARDS.pdf" class="resources-link" target="_blank">Policy on Unused and Expiring Filter Cards (PDF)</a>
+                            </li>
+                            <li>
+                                <span class="memo-id">MEMO 2017-04-12-004</span>
+                                <a href="/files/2017/NSCSL - MEMO 2017-04-12-004 % SAMPLE ONLY COMPUTATION.docx" class="resources-link" target="_blank">% Sample Only Computation</a>
+                            </li>
+                            <li>
+                                <span class="memo-id">MEMO 2017-04-12-004</span>
+                                <a href="/files/2017/NSCSL - MEMO 2017-04-12-004 REITERATION OF 2% SURCHARGE ON OUTSTANDING ACCOUNTS FOR.doc" class="resources-link" target="_blank">Reiteration of 2% Surcharge on Outstanding Accounts</a>
+                            </li>
+                            <li>
+                                <span class="memo-id">MEMO 2017-04-12-005</span>
+                                <a href="/files/2017/NSCSL - MEMO 2017-04-12-005 REITERATION OF MEMO ON UPDATE OF INSTITUTIONAL MEMBERSHIP DATA.pdf" class="resources-link" target="_blank">Update of Institutional Membership Data</a>
+                            </li>
+                            <li>
+                                <span class="memo-id">MEMO 2017-05-10-006</span>
+                                <a href="/files/2017/NSCSL - MEMO 2017-05-10-006 OFFICE DAY – MAY 26, 2017 (FRIDAY) for facility.doc" class="resources-link" target="_blank">Office Day – May 26, 2017</a>
+                            </li>
+                            <li>
+                                <span class="memo-id">MEMO 2017-08-03-007</span>
+                                <a href="/files/2017/NSCSL - MEMO 2017-08-03-007 DELAY IN THE SUPPLY OF REAGENTS FOR G6PD.pdf" class="resources-link" target="_blank">Delay in the Supply of Reagents for G6PD</a>
+                            </li>
+                            <li>
+                                <span class="memo-id">MEMO 2017-10-12-008</span>
+                                <a href="/files/2017/NSCSL - MEMO 2017-10-12-008 NSC-SL ALL SAINTS’ DAY SCHEDULE.pdf" class="resources-link" target="_blank">All Saints’ Day Schedule</a>
+                            </li>
+                            <li>
+                                <span class="memo-id">MEMO 2017-10-13-009</span>
+                                <a href="/files/2017/NSCSL - MEMO 2017-10-13-009 AIM FOR ZERO MISSING INFORMATION.pdf" class="resources-link" target="_blank">Aim for Zero Missing Information</a>
+                            </li>
+                            <li>
+                                <span class="memo-id">MEMO 2017-10-13-012</span>
+                                <a href="/files/2017/NSCSL - MEMO 2017-10-13-012 RELEASE OF NBS RESULTS THROUGH EMAIL.pdf" class="resources-link" target="_blank">Release of NBS Results Through Email</a>
+                            </li>
+                            <li>
+                                <span class="memo-id">MEMO 2017-12-11-013</span>
+                                <a href="/files/2017/NSCSL - MEMO 2017-12-11-013 HOLIDAY 2017.pdf" class="resources-link" target="_blank">Holiday 2017</a>
+                            </li>
+                            <li>
+                                <span class="memo-id">MEMO 2017-12-12-014</span>
+                                <a href="/files/2017/NSCSL - MEMO2017-12-12-014 POLICY ON UNUSED AND URGENT RECALL OF OUTDATED (EXPIRED).pdf" class="resources-link" target="_blank">Urgent Recall of Outdated Filter Cards</a>
+                            </li>
+                            <li>
+                                <span class="memo-id">NSCSL</span>
+                                <a href="/files/2017/NSC-SL MEMO-ON COLL LANDBANK 2017.docx" class="resources-link" target="_blank">Memo on COLLANDBANK 2017</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="tab-pane fade" id="tab2016">
+                        <!-- 2022 content -->
+                        <ul class="resources-list">
+                            <li>
+                                <span class="memo-id">Mechanics</span>
+                                <a href="/files/2016/Mechanics on PO System.pdf" class="resources-link" target="_blank">Mechanics on po system</a>
+                            </li>
+                            <li>
+                                <span class="memo-id">MEMO 2016-01-04-001</span>
+                                <a href="/files/2016/NSC SL - MEMO 2016-01-04-001 REITERATION OF MEMO 2014-11-08.doc" class="resources-link" target="_blank">Reiteration of memo 2014-11-08</a>
+                            </li>
+                            <li>
+                                <span class="memo-id">MEMO 2016-01-06-002</span>
+                                <a href="/files/2016/NSC SL - MEMO 2016-01-06-002 INACTIVE FACILITIES.doc" class="resources-link" target="_blank">Inactive facilities</a>
+                            </li>
+                            <li>
+                                <span class="memo-id">MEMO 2016-01-08-003</span>
+                                <a href="/files/2016/NSC SL - MEMO 2016-01-08-003 COURIERS CONTACT NO.doc" class="resources-link" target="_blank">Couriers contact no</a>
+                            </li>
+                            <li>
+                                <span class="memo-id">MEMO 2016-01-11</span>
+                                <a href="/files/2016/NSC SL - MEMO 2016-01-11 Memorandum Letter for Inactive Facilities.pdf" class="resources-link" target="_blank">Memorandum letter for inactive facilities</a>
+                            </li>
+                            <li>
+                                <span class="memo-id">MEMO 2016-01-15-004</span>
+                                <a href="/files/2016/NSC SL - MEMO 2016-01-15-004 GUIDELINES IN MANAGING THE NSF CODE FOR CHANGES.pdf" class="resources-link" target="_blank">Guidelines in managing the NSF code for changes</a>
+                            </li>
+                            <li>
+                                <span class="memo-id">MEMO 2016-02-12-005</span>
+                                <a href="/files/2016/NSC SL - MEMO 2016-02-12-005 NO OFFICE DAY-FEB. 19, 2016 (FRIDAY).pdf" class="resources-link" target="_blank">No office day - Feb. 19, 2016 (Friday)</a>
+                            </li>
+                            <li>
+                                <span class="memo-id">MEMO 2016-03-14-006</span>
+                                <a href="/files/2016/NSC SL - MEMO 2016-03-14-006 NEWBORN SCREENING CENTER - SOUTHERN LUZON HOLY WEEK SCHEDULE 2016.pdf" class="resources-link" target="_blank">Newborn screening center - Southern Luzon holy week schedule 2016</a>
+                            </li>
+                            <li>
+                                <span class="memo-id">MEMO 2016-04-21-007</span>
+                                <a href="/files/2016/NSC SL - MEMO 2016-04-21-007 UPDATE E-MAIL ADD.doc" class="resources-link" target="_blank">Update e-mail add</a>
+                            </li>
+                            <li>
+                                <span class="memo-id">MEMO 2016-04-22-008</span>
+                                <a href="/files/2016/NSC SL - MEMO 2016-04-22-008 BLOOD TRANSFUSION PROTOCOL FOR NBS.pdf" class="resources-link" target="_blank">Blood transfusion protocol for NBS</a>
+                            </li>
+                            <li>
+                                <span class="memo-id">MEMO 2016-05-12-009</span>
+                                <a href="/files/2016/NSC SL - MEMO 2016-05-12-009 CLINICAL INFORMATION.pdf" class="resources-link" target="_blank">Clinical information</a>
+                            </li>
+                            <li>
+                                <span class="memo-id">MEMO 2016-05-16-010</span>
+                                <a href="/files/2016/NSC SL - MEMO 2016-05-16-010 NBS FILTER CARD REPLACEMENT.pdf" class="resources-link" target="_blank">NBS filter card replacement</a>
+                            </li>
+                            <li>
+                                <span class="memo-id">MEMO 2016-05-19-011</span>
+                                <a href="/files/2016/NSC SL - MEMO 2016-05-19-011 MODE OF PAYMENT & BIR FORM.docx" class="resources-link" target="_blank">Mode of payment & BIR form</a>
+                            </li>
+                            <li>
+                                <span class="memo-id">MEMO 2016-06-21</span>
+                                <a href="/files/2016/NSC SL - MEMO 2016-06-21 BORROWING OF NBS FILTER CARDS FROM OTHER FACILITY.doc" class="resources-link" target="_blank">Borrowing of NBS filter cards from other facility</a>
+                            </li>
+                            <li>
+                                <span class="memo-id">MEMO 2016-09-14-012</span>
+                                <a href="/files/2016/NSC SL - MEMO 2016-09-14-012 GUIDELINES USING ENBS.pdf" class="resources-link" target="_blank">Guidelines using ENBS</a>
+                            </li>
+                            <li>
+                                <span class="memo-id">MEMO 2016-09-15-013</span>
+                                <a href="/files/2016/NSC SL - MEMO 2016-09-15-013 Indicating Home Birth in the Filter Cards.docx" class="resources-link" target="_blank">Indicating home birth in the filter cards</a>
+                            </li>
+                            <li>
+                                <span class="memo-id">MEMO 2016-09-27-014A</span>
+                                <a href="/files/2016/NSC SL - MEMO 2016-09-27-014A MEMO Submission of LOC & Use of Transmittal Form.pdf" class="resources-link" target="_blank">Memo submission of LOC & use of transmittal form</a>
+                            </li>
+                            <li>
+                                <span class="memo-id">MEMO 2016-10-24-14</span>
+                                <a href="/files/2016/NSC SL - MEMO 2016-10-24-14 SCHEDULE - ALL SAINT'S DAY.doc" class="resources-link" target="_blank">Schedule - All Saint's Day</a>
+                            </li>
+                            <li>
+                                <span class="memo-id">MEMO 2016-12-16-017</span>
+                                <a href="/files/2016/NSC SL - MEMO 2016-12-16-017 HOLIDAY 2016.doc" class="resources-link" target="_blank">Holiday 2016</a>
+                            </li>
+                            <li>
+                                <span class="memo-id">MEMO 2017-10-13-012</span>
+                                <a href="/files/2017/NSCSL - MEMO 2017-10-13-012 RELEASE OF NBS RESULTS THROUGH EMAIL.pdf" class="resources-link" target="_blank">Release of NBS results through email</a>
+                            </li>
+                            
+                        </ul>
+                    </div>
+
+                    <div class="tab-pane fade" id="tab2015">
+                        <!-- 2022 content -->
+                        <ul class="resources-list">
+                            <li>
+                                <span class="memo-id">MEMO 2015-07-01</span>
+                                <a href="/files/2015/NSC SL - MEMO 2015-07-01 CHANGES ON THE FILTER CARD BABYS STATUS.docx" class="resources-link" target="_blank">Changes on the filter card baby's status</a>
+                            </li>
+                            <li>
+                                <span class="memo-id">MEMO 2015-07-02</span>
+                                <a href="/files/2015/NSC SL - MEMO 2015-07-02 ONLINE COLLECTION.docx" class="resources-link" target="_blank">Online collection</a>
+                            </li>
+                            <li>
+                                <span class="memo-id">MEMO 2015-07-03</span>
+                                <a href="/files/2015/NSC SL - MEMO 2015-07-03 NONE SUBMISSION OF BIR 2306 2307 FORM.docx" class="resources-link" target="_blank">None submission of BIR 2306 2307 form</a>
+                            </li>
+                            <li>
+                                <span class="memo-id">MEMO 2015-08-04</span>
+                                <a href="/files/2015/NSC SL - MEMO 2015-08-04 Guidelines on the Repeat Collection NBS Blood Samples.docx" class="resources-link" target="_blank">Guidelines on the repeat collection NBS blood samples</a>
+                            </li>
+                            <li>
+                                <span class="memo-id">MEMO 2015-08-04</span>
+                                <a href="/files/2015/NSC SL - MEMO 2015-08-04 Guidelines on the Repeat Collection NBS Blood Samples.pdf" class="resources-link" target="_blank">Guidelines on the repeat collection NBS blood samples</a>
+                            </li>
+                            <li>
+                                <span class="memo-id">MEMO 2015-08-05</span>
+                                <a href="/files/2015/NSC SL - MEMO 2015-08-05 NBS POSTER.docx" class="resources-link" target="_blank">NBS poster</a>
+                            </li>
+                            <li>
+                                <span class="memo-id">MEMO 2015-12-04</span>
+                                <a href="/files/2015/NSC SL - MEMO 2015-12-04 December Holiday Schedule.doc" class="resources-link" target="_blank">December holiday schedule</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="tab-pane fade" id="tab2014">
+                        <!-- 2022 content -->
+                        <ul class="resources-list">
+                            <li>
+                                <span class="memo-id">MEMO 2014-05-02</span>
+                                <a href="/files/2014/NSC SL - MEMO 2014-05-02 UPDATES ON OFFICIAL COURIER OF NSC-SL.doc" class="resources-link" target="_blank">Updates on official courier of NSC-SL</a>
+                            </li>
+                            <li>
+                                <span class="memo-id">MEMO 2014-05-03</span>
+                                <a href="/files/2014/NSC SL - MEMO 2014-05-03 OUTDATED CARDS.doc" class="resources-link" target="_blank">Outdated cards</a>
+                            </li>
+                            <li>
+                                <span class="memo-id">MEMO 2014-05-26</span>
+                                <a href="/files/2014/NSC SL - MEMO 2014-05-26 PROTOCOL ON COLLECTING BLOOD SAMPLE FOR NBS.pdf" class="resources-link" target="_blank">Protocol on collecting blood sample for NBS</a>
+                            </li>
+                            <li>
+                                <span class="memo-id">MEMO 2014-07-05</span>
+                                <a href="/files/2014/NSC SL - MEMO 2014-07-05 NEW PROTOCOL ON PRETERM, LOW BIRTH WEIGHT AND SICK INFANT FOR.pdf" class="resources-link" target="_blank">New protocol on preterm, low birth weight and sick infant</a>
+                            </li>
+                            <li>
+                                <span class="memo-id">MEMO 2014-08-06</span>
+                                <a href="/files/2014/NSC SL - MEMO 2014-08-06 ADDITIONAL DATA REQUIREMENT FOR REPEAT NBS.doc" class="resources-link" target="_blank">Additional data requirement for repeat NBS</a>
+                            </li>
+                            <li>
+                                <span class="memo-id">MEMO 2014-08-07</span>
+                                <a href="/files/2014/NSC SL - MEMO 2014-08-07 NBS FILTER CARD STICKER IN PHILHEALTH CLAIM FORM 2.pdf" class="resources-link" target="_blank">NBS filter card sticker in PhilHealth claim form 2</a>
+                            </li>
+                            <li>
+                                <span class="memo-id">MEMO 2014-11-08</span>
+                                <a href="/files/2014/NSC SL - MEMO 2014-11-08 UPDATE OF INSTITUTIONAL MEMBERSHIP DATA.doc" class="resources-link" target="_blank">Update of institutional membership data</a>
+                            </li>
+                            <li>
+                                <span class="memo-id">MEMO 2014-11-10</span>
+                                <a href="/files/2014/NSC SL - MEMO 2014-11-10 UPDATED PROTOCOL ON PRETERM, LOW BIRTH WEIGHT AND INFANTS.pdf" class="resources-link" target="_blank">Updated protocol on preterm, low birth weight and infants</a>
+                            </li>
+                            <li>
+                                <span class="memo-id">MEMO 2014-11-26</span>
+                                <a href="/files/2014/NSC SL - MEMO 2014-11-26 2% SURCHARGE (Sample Computation).doc" class="resources-link" target="_blank">2% surcharge (sample computation)</a>
+                            </li>
+                            <li>
+                                <span class="memo-id">MEMO 2014-11-26</span>
+                                <a href="/files/2014/NSC SL - MEMO 2014-11-26 IMPLEMENTATION OF 2% SURCHARGE ON OUTSTANDING ACCOUNTS FOR.doc" class="resources-link" target="_blank">Implementation of 2% surcharge on outstanding accounts</a>
+                            </li>
+                            <li>
+                                <span class="memo-id">MEMO 2014-12-11</span>
+                                <a href="/files/2014/NSC SL - MEMO 2014-12-11 EXPANDED NEWBORN SCREENING (ENBS) NOW AVAILABLE.doc" class="resources-link" target="_blank">Expanded newborn screening (ENBS) now available</a>
+                            </li>
+                            <li>
+                                <span class="memo-id">NSCSL</span>
+                                <a href="/files/2014/QUARTERLY NEWBORN SCREENING REPORT ( NBS REPORTING FORM ).doc" class="resources-link" target="_blank">Quarterly newborn screening report (NBS reporting form)</a>
+                            </li>
+                            
+                        </ul>
+                    </div>
+                    
+                    <!-- Continue for other years -->
+                </div>
+            </div>
+            
+            <div class="container mt-4 text-left">
+                <button id="backButton" class="btn btn-secondary">Back</button>
+            </div>
+        </div>
+    </section>
+    
+    <footer class="text-white py-4" style="background-color: #333333;">
+        <div class="container">
+            <div class="row">
+                <!-- Left Column -->
+                <div class="col-lg-4 mb-4">
+                    <h4 class="fw-bold" style="font-size: 20px;">Newborn Screening Center Southern Luzon</h4>
+                    <p>
+                        Newborn Screening is a public health program that ensures all babies born in Philippines undergo screening for early identification of disorders (inborn errors of metabolism) that can lead to mental retardation and death.
+                    </p>
+                    <div>
+                        <a href="https://www.facebook.com/p/Southern-Luzon-NSC-100064428682142/" class="btn btn-danger btn-sm"><i class="fab fa-facebook-f"></i></a>
+                        <a href="mailto:admin@nscsl.com.ph" class="btn btn-danger btn-sm" title="Send Email">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                        <a href="https://ph.linkedin.com/company/dmmc-institute-of-health-sciences" class="btn btn-danger btn-sm"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+    
+                <!-- Contact Column -->
+                <div class="col-lg-4 mb-4">
+                    <h5 class="fw-bold">Contact</h5>
+                    <p>
+                        <i class="fas fa-map-marker-alt"></i> 
+                        <a href="https://www.google.com/maps/search/?api=1&query=3rd+Floor+DMMC-IHS+Building,+143+Narra+Street,+Mountview+Subd.,+Tanauan+City,+Batangas,+4232,+Philippines" 
+                        target="_blank" 
+                        class="location-link" 
+                        data-bs-toggle="tooltip" 
+                        title="View on Google Maps">
+                        3rd Floor DMMC-IHS Building, #143 Narra Street, Mountview Subd., Tanauan City, Batangas, 4232, Philippines
+                        </a>
+                    </p>
+    
+                    <div id="email-container">
+                        <p>
+                            <i class="fas fa-envelope me-2"></i> 
+                            <a href="mailto:admin@nscsl.com.ph" class="email-link" data-bs-toggle="tooltip" title="Email: admin@nscsl.com.ph">
+                                admin@nscsl.com.ph
+                            </a> 
+                            <button class="btn btn-sm btn-danger mt-2" id="toggle-email-btn" onclick="toggleEmails()"> + </button>
+                        </p>
+                        <div id="extra-emails" style="display: none;">
+                            <p><i class="fas fa-envelope me-2"></i> <a href="mailto:unsat@nscsl.com.ph" class="email-link" data-bs-toggle="tooltip" title="Email: unsat@nscsl.com.ph">unsat@nscsl.com.ph</a></p>
+                            <p><i class="fas fa-envelope me-2"></i> <a href="mailto:accounting1@nscsl.com.ph" class="email-link" data-bs-toggle="tooltip" title="Email: accounting1@nscsl.com.ph">accounting1@nscsl.com.ph</a></p>
+                            <p><i class="fas fa-envelope me-2"></i> <a href="mailto:accounting2@nscsl.com.ph" class="email-link" data-bs-toggle="tooltip" title="Email: accounting2@nscsl.com.ph">accounting2@nscsl.com.ph</a></p>
+                            <p><i class="fas fa-envelope me-2"></i> <a href="mailto:pdo1@nscsl.com.ph" class="email-link" data-bs-toggle="tooltip" title="Email: pdo1@nscsl.com.ph">pdo1@nscsl.com.ph</a></p>
+                            <p><i class="fas fa-envelope me-2"></i> <a href="mailto:pdo2@nscsl.com.ph" class="email-link" data-bs-toggle="tooltip" title="Email: pdo2@nscsl.com.ph">pdo2@nscsl.com.ph</a></p>
+                            <p><i class="fas fa-envelope me-2"></i> <a href="mailto:pdo3@nscsl.com.ph" class="email-link" data-bs-toggle="tooltip" title="Email: pdo3@nscsl.com.ph">pdo3@nscsl.com.ph</a></p>
+                            <p><i class="fas fa-envelope me-2"></i> <a href="mailto:pdolopez@nscsl.com.ph" class="email-link" data-bs-toggle="tooltip" title="Email: pdolopez@nscsl.com.ph">pdolopez@nscsl.com.ph</a></p>
+                            <p><i class="fas fa-envelope me-2"></i> <a href="mailto:programmngr@nscsl.com.ph" class="email-link" data-bs-toggle="tooltip" title="Email: programmngr@nscsl.com.ph">programmngr@nscsl.com.ph</a></p>
+                        </div>
+                    </div>
+    
+                    <!-- Phone Numbers with Tooltips -->
+                    <p>
+                        <i class="fas fa-phone-alt"></i> 
+                        <a href="tel:+639155432390" data-bs-toggle="tooltip" title="Call this number">+639155432390</a>
+                    </p>
+                    <p>
+                        <i class="fas fa-phone-alt"></i> 
+                        <a href="tel:+639239083301" data-bs-toggle="tooltip" title="Call this number">+639239083301</a>
+                    </p>
+                    <p>
+                        <i class="fas fa-phone-alt"></i> 
+                        <a href="tel:+639062179280" data-bs-toggle="tooltip" title="Call this number">+639062179280</a>
+                    </p>
+                    <p><i class="fas fa-fax"></i> (043) 341-6032</p>
+                </div>
+    
+                <!-- Extension Office Column -->
+                <div class="col-lg-4 mb-4">
+                    <!-- Extension Office Column -->
+                    <h5 class="fw-bold">Lopez Quezon Extension Office</h5>
+                    <p>
+                        <i class="fas fa-map-marker-alt"></i> 
+                        <a href="https://www.google.com/maps/place/Newborn+Screening+Center+-+Southern+Luzon+Lopez,+Quezon+Satellite+Office/@13.8860307,122.2628617,17z/data=!4m15!1m8!3m7!1s0x33a289fdde6be4e9:0xb7c841b60097d8c1!2sNewborn+Screening+Center+-+Southern+Luzon+Lopez,+Quezon+Satellite+Office!8m2!3d13.8860255!4d122.2654366!10e1!16s%2Fg%2F11p0bgyg_z!3m5!1s0x33a289fdde6be4e9:0xb7c841b60097d8c1!8m2!3d13.8860255!4d122.2654366!16s%2Fg%2F11p0bgyg_z?entry=ttu&g_ep=EgoyMDI1MDMyNC4wIKXMDSoASAFQAw%3D%3D" 
+                        target="_blank" 
+                        class="location-link" 
+                        data-bs-toggle="tooltip" 
+                        title="View on Google Maps">
+                        2nd Floor, Arago Building, Brgy. Danlagan, Lopez, Quezon
+                        </a>
+                    </p>
+
+                    <!-- Emails with Tooltips -->
+                    <p>
+                        <i class="fas fa-envelope me-2"></i> 
+                        <a href="mailto:pdolopez@nscsl.com.ph" class="email-link" data-bs-toggle="tooltip" title="Email: pdolopez@nscsl.com.ph">
+                            pdolopez@nscsl.com.ph
+                        </a>
+                    </p>
+                    <p>
+                        <i class="fas fa-envelope me-2"></i> 
+                        <a href="mailto:adminlopez@nscsl.com.ph" class="email-link" data-bs-toggle="tooltip" title="Email: adminlopez@nscsl.com.ph">
+                            adminlopez@nscsl.com.ph
+                        </a>
+                    </p>
+
+                    <!-- Phone Numbers with Tooltips -->
+                    <p>
+                        <i class="fas fa-phone-alt"></i> 
+                        <a href="tel:+639668631343" class="phone-link" data-bs-toggle="tooltip" title="Call this number">
+                            +639668631343
+                        </a>
+                    </p>
+                    <p>
+                        <i class="fas fa-phone-alt"></i> 
+                        <a href="tel:+639685960803" class="phone-link" data-bs-toggle="tooltip" title="Call this number">
+                            +639685960803
+                        </a>
+                    </p>
+                </div>
+
+            </div>
+    
+        </div>
+
+        
+        <!-- Move to top button -->
+        <button onclick="topFunction()" id="movetop" title="Go to top" style="background-color: #F27D0C; border: none; padding: 10px; border-radius: 20%; position: fixed; bottom: 20px; right: 20px;">
+            <span class="fas fa-arrow-up" style="color: white;"></span>
+        </button>
+
+    </footer>
+
+    
+    <p class="text-center py-2" style="background-color: white; color: #063FA1; font-weight: bold;">
+        &copy; 2024 Newborn Screening Southern Luzon. All rights reserved.
+    </p>
+
+    <!-- //footer -->
+    <!-- Js scripts -->
+    <!-- Template JavaScript -->
+    <script src="/js/jquery-3.3.1.min.js"></script>
+    <script src="/js/theme-change.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+  
+    <!-- //disable body scroll which navbar is in active -->
+    <!-- //bootstrap -->
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/resources.js"></script>
+    <script src="/js/memorandum.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+</html>

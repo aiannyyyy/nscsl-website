@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resources</title>
+    <link rel="icon" href="/images/ncslogo.ico" type="image/x-icon">
+
+    <link href="//fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,700;1,400;1,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
+    <link rel="stylesheet" href="/css/style-starter.css">
+    <link rel="stylesheet" href="/css/footer.css">
+    <link rel="stylesheet" href="/css/resources.css">
+    <link rel="stylesheet" href="/css/facebook-header.css">
+-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resources</title>
+    <link rel="icon" href="/images/ncslogo.ico" type="image/x-icon">
+
+    <!-- Google Fonts -->
+    <link href="//fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,700;1,400;1,600&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- Template CSS -->
+    <link rel="stylesheet" href="/css/style-starter.css">
+    <link rel="stylesheet" href="/css/footer.css">
+    <link rel="stylesheet" href="/css/resources.css">
+    <link rel="stylesheet" href="/css/facebook-header.css">
+</head>
+<style>
+    body {
+        position: relative;
+        /* Remove the direct background from body */
+    }
+
+    /* Create a pseudo-element for the watermark background */
+    body::before {
+        content: "";
+        position: fixed; /* Fixed ensures it stays in place during scroll */
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: url("/images/LOGO NEWWWWWWW.jpg") no-repeat center center;
+        background-size: contain; /* or cover, depending on your preference */
+        background-attachment: fixed;
+        opacity: 0.04; /* Slightly higher opacity to see through navbar */
+        z-index: 9998; /* Above content but below navbar (navbar is z-index: 9999) */
+        pointer-events: none; /* Ensures it doesn't interfere with user interactions */
+    }
+
+    /* Make sure the header has proper fixed positioning */
+    #site-header {
+        background-color: #063FA1 !important;
+        z-index: 9999 !important;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        transition: all 0.3s ease;
+    }
+
+    /* Alternative approach - if you want the logo to repeat as a pattern */
+    body::after {
+        content: "";
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: url("/images/LOGO NEWWWWWWW.jpg") repeat;
+        background-size: 200px 200px; /* Adjust size as needed */
+        opacity: 0.03; /* Even lower opacity for repeated pattern */
+        z-index: -2;
+        pointer-events: none;
+        display: none; /* Enable this if you want the repeated pattern instead */
+    }
+</style>
+<body>
+    <!--/Header-->
+    <header id="site-header" class="fixed-top">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light stroke py-lg-0">
+                <h1>
+                    <img src="/images/dmmc.jpg" alt="DMMC IHS Logo" style="height: 30px;"> <!-- Adjust height as needed -->
+                    <img src="/images/LOGO NEWWWWWWW.jpg" alt="NSC SL Logo" style="height: 30px;"> <!-- Adjust height as needed -->
+                    <a class="navbar-brand pe-xl-5 pe-lg-4" href="index.html">
+                        <span class="sublog">NSC</span>SL
+                    </a>
+                </h1>
+                <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon fa icon-expand fa-bars"></span>
+                    <span class="navbar-toggler-icon fa icon-close fa-times"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarScroll">
+                    <ul class="navbar-nav me-lg-auto my-2 my-lg-0 navbar-nav-scroll">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="event.html">Events</a>
+                        </li>
+
+                        <!--
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Other Pages
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="resources.html">Resources</a></li>
+                                <li><a class="dropdown-item" href="#">Blog Post</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="#">Separated Link</a></li>
+                            </ul>
+                        </li>
+                        -->
+
+                        <li class="nav-item">
+                            <a class="nav-link active" href="resources.html">Resources</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="announcement.html">Announcements</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contact</a>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav ms-auto align-items-center">
+                        <li class="nav-item d-flex align-items-center">
+                            <a class="nav-link d-flex align-items-center" href="https://www.facebook.com/p/Southern-Luzon-NSC-100064428682142/" target="_blank" title="Follow us on Facebook">
+                                <i class="fab fa-facebook-f me-2" style="color: white; font-size: 18px;"></i>
+                                <span class="text-white">NSC Southern Luzon</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+     <!-- breadcrumb -->
+     <section class="w3l-about-breadcrumb">
+        <div class="breadcrumb-bg breadcrumb-bg-about">
+            <div class="container py-lg-5 py-sm-4">
+                <div class="w3breadcrumb-gids text-center">
+                    <div class="w3breadcrumb-info mt-5">
+                        <h2 class="w3ltop-title pt-4">Resources</h2>
+                        <!--
+                        <ul class="breadcrumbs-custom-path">
+                            <li><a href="index.html">Home</a></li>
+                            <li class="active"><span class="fas fa-angle-double-right mx-2"></span> About </li>
+                        </ul>
+                        -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="w3l-products w3l-faq-block py-5" id="projects">
+        <div class="container py-md-5 py-2">
+            <div class="header-secw3 text-center mb-5">
+                <h3 class="title-w3l mb-4">
+                    NSCSL Educational and Training Resource Materials
+                </h3>
+            </div>
+            <div class="row">
+                <div class="col-lg-12 mt-lg-0 mt-sm-5 mt-4">
+                    <div class="accordion">
+                        <div class="accordion-item">
+                            <button id="accordion-button-1" aria-expanded="true">
+                                <span class="accordion-title">
+                                    Memorandums
+                                </span><span class="icon" aria-hidden="true"></span>
+                            </button>
+                            <div class="accordion-content">
+                                <ol>
+                                    <li><a href="/files/2025/NSCSL - MEMO 2025-01-07-001 Membership Data Update 2025.pdf" target="_blank" class="accordion-link">NSCSL - MEMO 2025-01-07-001 Membership Data Update 2025</a></li>
+                                    <li><a href="/files/2025/NSCSL - MEMO 2025-01-07-002 Protocol in Sending NBS Samples Using Accredited Couriers.pdf" target="_blank" class="accordion-link">NSCSL - MEMO 2025-01-07-002 Protocol in Sending NBS Samples Using Accredited Couriers</a></li>
+                                    <li><a href="/files/2025/NSCSL - MEMO 2025-01-07-003 FILTER CARD MONITORING.docx" target="_blank" class="accordion-link">NSCSL - MEMO 2025-01-07-003 Filter Card Monitoring</a></li>
+                                    <li><a href="/files/2025/NSCSL - MEMO 2025-01-24-004.pdf" target="_blank" class="accordion-link">Information Dissemination on MEMO 2024-11-21-013 
+                                        Proper Collection of NBS Sample Quality Blood Spot Via Zoom</a></li>
+                                    <li><a href="/files/2025/NSCSL - MEMO 2025-03-27-007 PNB MOBILE BANGKING TRANSACTION V2.docx" target="_blank" class="accordion-link">NSCSL MEMO 2025-01-13-001 - Reiteration on Courier Reimbursements</a> <br> <br>
+                                        <a href="memorandum.html" class="btn btn-primary btn-sm" style="margin-left: 15px;">View All</a>
+                                    </li>
+                                </ol>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <button id="accordion-button-2" aria-expanded="false">
+                                <span class="accordion-title">
+                                    Fact Sheets & Books
+                                </span><span class="icon" aria-hidden="true"></span>
+                            </button>
+                            <div class="accordion-content">
+                                <ol>
+                                    <li><a href="amino-acid-disorder.html" class="accordion-link">Amino Acid Disorders [Doctors] [Parents – English] [Parents – Filipino]</a></li>
+                                    <li><a href="endocrine-disorder.html" class="accordion-link">Endocrine Disorders [Doctors] [Parents – English] [Parents – Filipino]</a></li>
+                                    <li><a href="fatty-acid-oxidation-disorder.html" class="accordion-link">Fatty Acid Oxidation Disorders [Doctors] [Parents – English] [Parents – Filipino]</a></li>
+                                    <li><a href="organic-aciduras.html" class="accordion-link">Organic Acidurias [Doctors] [Parents – English] [Parents – Filipino]</a></li>
+                                    <li><a href="thalassemias-and-hemoglobinopathies.html" class="accordion-link">Thalassemias and Hemoglobinopathies [Doctors] [Parents – English] [Parents – Filipino]</a></li>
+                                    <li><a href="urea-cycle-defects.html" class="accordion-link">Urea Cycle Defects [Doctors] [Parents – English] [Parents – Filipino]</a></li>
+                                    <li><a href="other-fact-sheets.html" class="accordion-link">Others [Doctors] [Parents – English] [Parents – Filipino]
+                                    </a></li>
+                                </ol>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <button id="accordion-button-3" aria-expanded="false">
+                                <span class="accordion-title">
+                                    Brochures
+                                </span><span class="icon" aria-hidden="true"></span>
+                            </button>
+                            <div class="accordion-content">
+                                <ol>
+                                    <li style="padding: 15px 0 0 60px;">Expanded Newborn Screening Brochure [<a href="/files/brochure/ENBS-PBE-2020 NEW.pdf" target="_blank" class = "accordion-link1">English</a> | <a href="/files/brochure/ENBS-PBT-2020 NEW.pdf" class="accordion-link1">Filipino</a>]</li>
+                                    <li><a href="/files/brochure/Alpha Thal brochure.pdf" target="_blank" class="accordion-link">Alpha Thalassemia Brochure</a></li>
+                                    <li><a href="/files/brochure/www.newbornscreening.ph_images_stories_downloadables_G6PD-brochure_2014.pdf" target="_blank" class="accordion-link">G6PD Brochure</a></li>
+                                    <li> <a href="/files/brochure/spot check.JPG" target="_blank" class="accordion-link"> Blood Spot Check </a> <br> <br>
+                                        <!--
+                                        <a href="brochure.html" class="btn btn-primary btn-sm" style="margin-left: 15px;">View All</a>
+                                        -->
+                                    </li>
+                                </ol>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <button id="accordion-button-3" aria-expanded="false">
+                                <span class="accordion-title">
+                                    Posters
+                                </span><span class="icon" aria-hidden="true"></span>
+                            </button>
+                            <div class="accordion-content">
+                                <ol>
+                                    <li style="padding: 15px 0 0 60px;">  <a href="" target="_blank" class = "accordion-link1"> Gabay </a></li>
+                                    <li><a href="/images/poster1.png" target="_blank" class="accordion-link">Are Your Newborn Screenening Samples Acceptable?</a></li>
+                                    <li><a href="/images/poster2.JPG" target="_blank" class="accordion-link">Collection Procedure</a></li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="text-white py-4" style="background-color: #333333;">
+        <div class="container">
+            <div class="row">
+                <!-- Left Column -->
+                <div class="col-lg-4 mb-4">
+                    <h4 class="fw-bold" style="font-size: 20px;">Newborn Screening Center Southern Luzon</h4>
+                    <p>
+                        Newborn Screening is a public health program that ensures all babies born in Philippines undergo screening for early identification of disorders (inborn errors of metabolism) that can lead to mental retardation and death.
+                    </p>
+                    <div>
+                        <a href="https://www.facebook.com/p/Southern-Luzon-NSC-100064428682142/" class="btn btn-danger btn-sm"><i class="fab fa-facebook-f"></i></a>
+                        <a href="mailto:admin@nscsl.com.ph" class="btn btn-danger btn-sm" title="Send Email">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                        <a href="https://ph.linkedin.com/company/dmmc-institute-of-health-sciences" class="btn btn-danger btn-sm"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+
+                <!-- Contact Column -->
+                <div class="col-lg-4 mb-4">
+                    <h5 class="fw-bold">Contact</h5>
+                    <p>
+                        <i class="fas fa-map-marker-alt"></i> 
+                        <a href="https://www.google.com/maps/search/?api=1&query=3rd+Floor+DMMC-IHS+Building,+143+Narra+Street,+Mountview+Subd.,+Tanauan+City,+Batangas,+4232,+Philippines" 
+                        target="_blank" 
+                        class="location-link" 
+                        data-bs-toggle="tooltip" 
+                        title="View on Google Maps">
+                        3rd Floor DMMC-IHS Building, #143 Narra Street, Mountview Subd., Tanauan City, Batangas, 4232, Philippines
+                        </a>
+                    </p>
+
+                    <div id="email-container">
+                        <p>
+                            <i class="fas fa-envelope me-2"></i> 
+                            <a href="mailto:admin@nscsl.com.ph" class="email-link" data-bs-toggle="tooltip" title="Email: admin@nscsl.com.ph">
+                                admin@nscsl.com.ph
+                            </a> 
+                            <button class="btn btn-sm btn-danger mt-2" id="toggle-email-btn" onclick="toggleEmails()"> + </button>
+                        </p>
+                        <div id="extra-emails" style="display: none;">
+                            <p><i class="fas fa-envelope me-2"></i> <a href="mailto:unsat@nscsl.com.ph">unsat@nscsl.com.ph</a></p>
+                            <p><i class="fas fa-envelope me-2"></i> <a href="mailto:accounting1@nscsl.com.ph">accounting1@nscsl.com.ph</a></p>
+                            <p><i class="fas fa-envelope me-2"></i> <a href="mailto:accounting2@nscsl.com.ph">accounting2@nscsl.com.ph</a></p>
+                            <p><i class="fas fa-envelope me-2"></i> <a href="mailto:pdo1@nscsl.com.ph">pdo1@nscsl.com.ph</a></p>
+                            <p><i class="fas fa-envelope me-2"></i> <a href="mailto:pdo2@nscsl.com.ph">pdo2@nscsl.com.ph</a></p>
+                            <p><i class="fas fa-envelope me-2"></i> <a href="mailto:pdo3@nscsl.com.ph">pdo3@nscsl.com.ph</a></p>
+                            <p><i class="fas fa-envelope me-2"></i> <a href="mailto:pdolopez@nscsl.com.ph">pdolopez@nscsl.com.ph</a></p>
+                            <p><i class="fas fa-envelope me-2"></i> <a href="mailto:programmngr@nscsl.com.ph">programmngr@nscsl.com.ph</a></p>
+                        </div>
+                    </div>
+
+                    <p><i class="fas fa-phone-alt"></i> <a href="tel:+639155432390">+639155432390</a></p>
+                    <p><i class="fas fa-phone-alt"></i> <a href="tel:+639239083301">+639239083301</a></p>
+                    <p><i class="fas fa-phone-alt"></i> <a href="tel:+639062179280">+639062179280</a></p>
+                    <p><i class="fas fa-fax"></i> (043) 341-6032</p>
+                </div>
+
+                <!-- Extension Office Column -->
+                <div class="col-lg-4 mb-4">
+                    <h5 class="fw-bold">Lopez Quezon Extension Office</h5>
+                    <p>
+                        <i class="fas fa-map-marker-alt"></i> 
+                        <a href="https://www.google.com/maps/place/Newborn+Screening+Center+-+Southern+Luzon+Lopez,+Quezon+Satellite+Office" 
+                        target="_blank" class="location-link" data-bs-toggle="tooltip" title="View on Google Maps">
+                        2nd Floor, Arago Building, Brgy. Danlagan, Lopez, Quezon
+                        </a>
+                    </p>
+
+                    <p><i class="fas fa-envelope me-2"></i> <a href="mailto:pdolopez@nscsl.com.ph">pdolopez@nscsl.com.ph</a></p>
+                    <p><i class="fas fa-envelope me-2"></i> <a href="mailto:adminlopez@nscsl.com.ph">adminlopez@nscsl.com.ph</a></p>
+
+                    <p><i class="fas fa-phone-alt"></i> <a href="tel:+639668631343">+639668631343</a></p>
+                    <p><i class="fas fa-phone-alt"></i> <a href="tel:+639685960803">+639685960803</a></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Move to top button -->
+        <button onclick="topFunction()" id="movetop" title="Go to top" style="background-color: #F27D0C; border: none; padding: 10px; border-radius: 20%; position: fixed; bottom: 20px; right: 20px;">
+            <span class="fas fa-arrow-up" style="color: white;"></span>
+        </button>
+    </footer>
+
+
+    
+    <p class="text-center py-2" style="background-color: white; color: #063FA1; font-weight: bold;">
+        &copy; 2024 Newborn Screening Southern Luzon. All rights reserved.
+    </p>
+
+    <!-- //footer -->
+    <!-- Js scripts -->
+    <!-- Template JavaScript -->
+    <script src="/js/jquery-3.3.1.min.js"></script>
+    <script src="/js/theme-change.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+  
+    <!-- //disable body scroll which navbar is in active -->
+    <!-- //bootstrap -->
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/resources.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+</html>

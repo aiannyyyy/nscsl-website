@@ -1,0 +1,829 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="icon" href="/images/ncslogo.ico" type="image/x-icon">
+
+    <link href="//fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,700;1,400;1,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="/css/style-starter.css">
+    <link rel="stylesheet" href="/css/footer.css">
+    <link rel="stylesheet" href="/css/contact.css">
+    <link rel="stylesheet" href="/css/facebook-header.css">
+-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="icon" href="/images/ncslogo.ico" type="image/x-icon">
+
+    <!-- Google Fonts -->
+    <link href="//fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,700;1,400;1,600&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- Template CSS -->
+    <link rel="stylesheet" href="/css/style-starter.css">
+    <link rel="stylesheet" href="/css/footer.css">
+    <link rel="stylesheet" href="/css/contact.css">
+    <link rel="stylesheet" href="/css/facebook-header.css">
+</head>
+<style>
+    body {
+        position: relative;
+        /* Remove the direct background from body */
+    }
+
+    /* Create a pseudo-element for the watermark background */
+    body::before {
+        content: "";
+        position: fixed; /* Fixed ensures it stays in place during scroll */
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: url("/images/LOGO NEWWWWWWW.jpg") no-repeat center center;
+        background-size: contain; /* or cover, depending on your preference */
+        background-attachment: fixed;
+        opacity: 0.04; /* Slightly higher opacity to see through navbar */
+        z-index: 9998; /* Above content but below navbar (navbar is z-index: 9999) */
+        pointer-events: none; /* Ensures it doesn't interfere with user interactions */
+    }
+
+    /* Make sure the header has proper fixed positioning */
+    #site-header {
+        background-color: #063FA1 !important;
+        z-index: 9999 !important;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        transition: all 0.3s ease;
+    }
+
+    /* Alternative approach - if you want the logo to repeat as a pattern */
+    body::after {
+        content: "";
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: url("/images/LOGO NEWWWWWWW.jpg") repeat;
+        background-size: 200px 200px; /* Adjust size as needed */
+        opacity: 0.03; /* Even lower opacity for repeated pattern */
+        z-index: -2;
+        pointer-events: none;
+        display: none; /* Enable this if you want the repeated pattern instead */
+    }
+</style>
+<body>
+
+    <!--/Header-->
+    <header id="site-header" class="fixed-top">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light stroke py-lg-0">
+                <h1>
+                    
+                    <a class="navbar-brand pe-xl-5 pe-lg-4" href="index.html">
+                        <img src="/images/dmmc.jpg" alt="DMMC IHS Logo" style="height: 30px;"> <!-- Adjust height as needed -->
+                        <img src="/images/LOGO NEWWWWWWW.jpg" alt="NSC SL Logo" style="height: 30px;"> <!-- Adjust height as needed -->
+                        <span class="sublog">NSC</span>SL
+                    </a>
+                </h1>
+                <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon fa icon-expand fa-bars"></span>
+                    <span class="navbar-toggler-icon fa icon-close fa-times"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarScroll">
+                    <ul class="navbar-nav me-lg-auto my-2 my-lg-0 navbar-nav-scroll">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="event.html">Events</a>
+                        </li>
+
+                        <!--
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Other Pages
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="resources.html">Resources</a></li>
+                                <li><a class="dropdown-item" href="#">Blog Post</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="#">Separated Link</a></li>
+                            </ul>
+                        </li>
+                        -->
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="resources.html">Resources</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="announcement.html">Announcements</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link active" href="contact.html">Contact</a>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav ms-auto align-items-center">
+                        <li class="nav-item d-flex align-items-center">
+                            <a class="nav-link d-flex align-items-center" href="https://www.facebook.com/p/Southern-Luzon-NSC-100064428682142/" target="_blank" title="Follow us on Facebook">
+                                <i class="fab fa-facebook-f me-2" style="color: white; font-size: 18px;"></i>
+                                <span class="text-white">NSC Southern Luzon</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- toggle switch for light and dark theme 
+                <div class="mobile-position">
+                    <nav class="navigation">
+                        <div class="theme-switch-wrapper">
+                            <label class="theme-switch" for="checkbox">
+                                <input type="checkbox" id="checkbox">
+                                <div class="mode-container">
+                                    <i class="gg-sun"></i>
+                                    <i class="gg-moon"></i>
+                                </div>
+                            </label>
+                        </div>
+                    </nav>
+                </div>
+
+            -->
+                <!-- //toggle switch for light and dark theme -->
+            </nav>
+        </div>
+    </header>
+    <!--//Header-->
+    <!-- breadcrumb -->
+    <section class="w3l-about-breadcrumb">
+        <div class="breadcrumb-bg breadcrumb-bg-about">
+            <div class="container py-lg-5 py-sm-4">
+                <div class="w3breadcrumb-gids text-center">
+                    <div class="w3breadcrumb-info mt-5">
+                        <h2 class="w3ltop-title pt-4">Contact Us</h2>
+                        <!--
+                        <ul class="breadcrumbs-custom-path">
+                            <li><a href="index.html">Home</a></li>
+                            <li class="active"><span class="fas fa-angle-double-right mx-2"></span> Contact</li>
+                        </ul>
+                        -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--//breadcrumb-->
+    <section class="w3l-contact-1 py-5" id="contact">
+        <div class="contacts-9 py-lg-5 py-md-4">
+            <div class="container text-center"> 
+                <!-- Centered Heading -->
+                <h3 class="title-w3l mb-3">Get In Touch</h3>
+                <p class="mb-5">
+                    We are here to provide you with comprehensive information and support regarding newborn screening. 
+                    Your feedback, questions, and concerns are important to us.
+                </p>
+    
+                <!-- Maps Row -->
+                <div class="row justify-content-center">
+                    <!-- First Map -->
+                    <div class="col-lg-6 mb-4">
+                        <div class="map-content-9">
+                            <div class="map-iframe">
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3958.6624217183214!2d121.1513532!3d14.0808642!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33bd6f5b5ee668c3%3A0x96b7c0479c850247!2sDMMC%20Institute%20of%20Health%20Sciences!5e0!3m2!1sen!2sph!4v1622999030345!5m2!1sen!2sph" width="100%" height="400" style="border:0;" allowfullscreen=""></iframe>
+                            </div>
+                        </div>
+                        <h5 class="mt-3">Newborn Screening Center Southern Luzon</h5>
+                    </div>
+    
+                    <!-- Second Map -->
+                    <div class="col-lg-6 mb-4">
+                        <div class="map-content-9">
+                            <div class="map-iframe">
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1151.5146668821208!2d122.26567393527066!3d13.88589599874935!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33a289fdde6be4e9%3A0xb7c841b60097d8c1!2sNewborn%20Screening%20Center%20-%20Southern%20Luzon%20Lopez%2C%20Quezon%20Satellite%20Office!5e0!3m2!1sen!2sph!4v1742890923068!5m2!1sen!2sph" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                            </div>
+                        </div>
+                        <h5 class="mt-3">Newborn Screening Center - Lopez Extension Office</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container py-lg-4">
+            <div class="header-sec text-center mb-5">
+                <h6 class="title-subhny mb-2">Visit Us</h6>
+                <h3 class="title-w3l">
+                    Operating Hours
+                </h3>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-6">
+                    <div class="hours-table text-center">
+                        <div class="table-responsive">
+                            <table class="table table-bordered table-hover">
+                                <thead class="bg-primary text-white">
+                                    <tr>
+                                        <th class="text-day" style="background-color: #063FA1;">Day</th>
+                                        <th class="text-hours" style="background-color: #063FA1;">Opening Hours</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="text-day" >Monday - Friday</td>
+                                        <td class="text-hours">8:00 AM - 5:00 PM</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="cute-icons mt-4">
+                            <span class="fas fa-sun fa-2x text-warning me-3"></span>
+                            <span class="fas fa-moon fa-2x text-primary me-3"></span>
+                            <span class="fas fa-clock fa-2x text-info"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="w3l-contact-1 py-5" id="contact-accordion" style="padding: 2rem;
+    padding-top: 4rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-top: 3rem;
+    background-color: white;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;">
+        <div class="header">
+            <h1>NSCSL DIRECTORY</h1>
+        </div>
+        
+        <div class="subtitle">
+            FOR MORE CONCERN AND CLARIFICATIONS
+        </div>
+        
+        <div class="content">
+            <!-- Program Concern -->
+            <div class="department">
+                <div class="department-header active">PROGRAM CONCERN</div>
+                <div class="department-content active">
+                    <div class="department-inner">
+                        <div class="department-subheader">NBS PROGRAM CONCERN</div>
+                        
+                        <div class="contact-grid">
+                            <div class="contact-item">
+                                <div class="contact-icon">📠</div>
+                                <div>
+                                    <span class="contact-label">PLDT:</span>
+                                    <span class="contact-value">(043) 341-6032</span>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-item">
+                                <div class="contact-icon">📱</div>
+                                <div>
+                                    <span class="contact-label">SUN:</span>
+                                    <span class="contact-value">0923-908-3301</span>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-item">
+                                <div class="contact-icon">📱</div>
+                                <div>
+                                    <span class="contact-label">GLOBE:</span>
+                                    <span class="contact-value">0915-543-2390</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="email-grid">
+                            <div class="contact-item">
+                                <div class="contact-icon">✉️</div>
+                                <div>
+                                    <span class="contact-value">pdo1@nscsl.com.ph</span>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-item">
+                                <div class="contact-icon">✉️</div>
+                                <div>
+                                    <span class="contact-value">pdo2@nscsl.com.ph</span>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-item">
+                                <div class="contact-icon">✉️</div>
+                                <div>
+                                    <span class="contact-value">pdo3@nscsl.com.ph</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="department-subheader">NSC-SL LOPEZ, QUEZON EXTENSION OFFICE</div>
+                        
+                        <div class="contact-grid">
+                            <div class="contact-item">
+                                <div class="contact-icon">📱</div>
+                                <div>
+                                    <span class="contact-label">GLOBE:</span>
+                                    <span class="contact-value">0966-863-1343</span>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-item">
+                                <div class="contact-icon">📱</div>
+                                <div>
+                                    <span class="contact-label">SMART:</span>
+                                    <span class="contact-value">0968-596-0803</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="email-grid">
+                            <div class="contact-item">
+                                <div class="contact-icon">✉️</div>
+                                <div>
+                                    <span class="contact-value">pdolopez@nscsl.com.ph</span>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-item">
+                                <div class="contact-icon">✉️</div>
+                                <div>
+                                    <span class="contact-value">adminlopez@nscsl.com.ph</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="address">
+                            <div class="contact-item">
+                                <div class="contact-icon">📍</div>
+                                <div>
+                                    <span class="contact-value">2nd floor, Arago building, Brgy. Danlagan Lopez, Quezon</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+ 
+            <!-- Accounting Concern -->
+            <div class="department">
+                <div class="department-header">ACCOUNTING CONCERN</div>
+                <div class="department-content">
+                    <div class="department-inner">
+                        <div class="department-subheader">PAYABLES AND BALANCES</div>
+                        
+                        <div class="contact-grid">
+                            <div class="contact-item">
+                                <div class="contact-icon">📱</div>
+                                <div>
+                                    <span class="contact-label">GLOBE:</span>
+                                    <span class="contact-value">0906-217-9280</span>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-item">
+                                <div class="contact-icon">📠</div>
+                                <div>
+                                    <span class="contact-label">PLDT Telefax:</span>
+                                    <span class="contact-value">(043) 341-6032</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="email-grid">
+                            <div class="contact-item">
+                                <div class="contact-icon">✉️</div>
+                                <div>
+                                    <span class="contact-value">accounting1@nscsl.com.ph</span>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-item">
+                                <div class="contact-icon">✉️</div>
+                                <div>
+                                    <span class="contact-value">accounting2@nscsl.com.ph</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Purchasing Concern -->
+            <div class="department">
+                <div class="department-header">PURCHASE ORDER CONCERN</div>
+                <div class="department-content">
+                    <div class="department-inner">
+                        <div class="department-subheader">PURCHASE ORDER</div>
+                        
+                        <div class="contact-grid">
+                            <div class="contact-item">
+                                <div class="contact-icon">📱</div>
+                                <div>
+                                    <span class="contact-label">SMART:</span>
+                                    <span class="contact-value">0931-0101640</span>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-item">
+                                <div class="contact-icon">📠</div>
+                                <div>
+                                    <span class="contact-label">PLDT:</span>
+                                    <span class="contact-value">(043) 341-6032</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="email-grid">
+                            <div class="contact-item">
+                                <div class="contact-icon">✉️</div>
+                                <div>
+                                    <span class="contact-value">supply@nscsl.com.ph</span>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-item">
+                                <div class="contact-icon">✉️</div>
+                                <div>
+                                    <span class="contact-value">purchasing@nscsl.com.ph</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Laboratory Concern -->
+            <div class="department">
+                <div class="department-header">LABORATORY CONCERN</div>
+                <div class="department-content">
+                    <div class="department-inner">
+                        <div class="department-subheader">STATUS AND RECALL OF UNSATISFACTORY SAMPLES</div>
+                        
+                        <div class="contact-grid">
+                            <div class="contact-item">
+                                <div class="contact-icon">📱</div>
+                                <div>
+                                    <span class="contact-label">SMART:</span>
+                                    <span class="contact-value">0933-0439651</span>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-item">
+                                <div class="contact-icon">☎️</div>
+                                <div>
+                                    <span class="contact-label">PLDT:</span>
+                                    <span class="contact-value">(043) 778-4849</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="email-grid">
+                            <div class="contact-item">
+                                <div class="contact-icon">✉️</div>
+                                <div>
+                                    <span class="contact-value">unsat@nscsl.com.ph</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Follow-up Concern -->
+            <div class="department">
+                <div class="department-header">FOLLOW-UP CONCERN</div>
+                <div class="department-content">
+                    <div class="department-inner">
+                        <div class="department-subheader">NEWBORN SCREENING RESULTS (Elevated/Result Update/Patients Concern)</div>
+                        
+                        <div class="contact-grid">
+                            <div class="contact-item">
+                                <div class="contact-icon">📱</div>
+                                <div>
+                                    <span class="contact-label">SMART:</span>
+                                    <span class="contact-value">0908-392-1298</span>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-item">
+                                <div class="contact-icon">📱</div>
+                                <div>
+                                    <span class="contact-label">SMART:</span>
+                                    <span class="contact-value">0931-202-7188</span>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-item">
+                                <div class="contact-icon">📱</div>
+                                <div>
+                                    <span class="contact-label">SUN:</span>
+                                    <span class="contact-value">0923-908-3296</span>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-item">
+                                <div class="contact-icon">📠</div>
+                                <div>
+                                    <span class="contact-label">PLDT:</span>
+                                    <span class="contact-value">(043) 341-6032</span>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-item">
+                                <div class="contact-icon">☎️</div>
+                                <div>
+                                    <span class="contact-label">GLOBE:</span>
+                                    <span class="contact-value">(043) 430-5071</span>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        
+                        <div class="email-grid">
+                            <div class="contact-item">
+                                <div class="contact-icon">✉️</div>
+                                <div>
+                                    <span class="contact-value">followup1@nscsl.com.ph</span>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-item">
+                                <div class="contact-icon">✉️</div>
+                                <div>
+                                    <span class="contact-value">followup2@nscsl.com.ph</span>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-item">
+                                <div class="contact-icon">✉️</div>
+                                <div>
+                                    <span class="contact-value">followup3@nscsl.com.ph</span>
+                                </div>
+                            </div>
+
+                            <div class="contact-item">
+                                <div class="contact-icon">✉️</div>
+                                <div>
+                                    <span class="contact-value">followup4@nscsl.com.ph</span>
+                                </div>
+                            </div>
+
+                            <div class="contact-item">
+                                <div class="contact-icon">✉️</div>
+                                <div>
+                                    <span class="contact-value">followupg6pd@nscsl.com.ph</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Extension Office 
+            <div class="department">
+                <div class="department-header">EXTENSION OFFICE</div>
+                <div class="department-content">
+                    <div class="department-inner">
+                        <div class="department-subheader">NSC-SL LOPEZ, QUEZON EXTENSION OFFICE</div>
+                        
+                        <div class="contact-grid">
+                            <div class="contact-item">
+                                <div class="contact-icon">📱</div>
+                                <div>
+                                    <span class="contact-label">GLOBE:</span>
+                                    <span class="contact-value">0966-863-1343</span>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-item">
+                                <div class="contact-icon">📱</div>
+                                <div>
+                                    <span class="contact-label">SMART:</span>
+                                    <span class="contact-value">0968-596-0803</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="email-grid">
+                            <div class="contact-item">
+                                <div class="contact-icon">✉️</div>
+                                <div>
+                                    <span class="contact-value">pdolopez@nscsl.com.ph</span>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-item">
+                                <div class="contact-icon">✉️</div>
+                                <div>
+                                    <span class="contact-value">adminlopez@nscsl.com.ph</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="address">
+                            <div class="contact-item">
+                                <div class="contact-icon">📍</div>
+                                <div>
+                                    <span class="contact-value">2nd floor, Arago building, Brgy. Danlagan Lopez, Quezon</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+            -->
+        </div>
+        
+        <div class="footer">
+            <p>Last updated: April 2025 • For official use</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="w3l-contact-1 w3hny-form-btm py-5" id="contact">
+        <div class="contacts-9 py-lg-5 py-md-4">
+            <div class="container">
+                <div class="header-sec text-center mb-5">
+                    <h6 class="title-subhny mb-2">Contact Us</h6>
+                    <h3 class="title-w3l">You may reach us with any questions.</h3>
+                </div>
+                <div class="contact-form map-content-9">
+                    <form onsubmit="sendEmail(event)" class="pt-lg-4">
+                        <div class="twice-two mb-3">
+                            <input type="text" class="form-control" name="w3lName" id="w3lName" placeholder="Name" required>
+                            <input type="email" class="form-control" name="w3lSender" id="w3lSender" placeholder="Email" required>
+                            <input type="text" class="form-control" name="w3lSubject" id="w3lSubject" placeholder="Subject" required>
+                        </div>
+                        <div class="mb-3">
+                            <textarea name="w3lMessage" class="form-control" id="w3lMessage" placeholder="Message" required></textarea>
+                        </div>
+                        <div class="text-center">
+                            <button type="submit" class="btn btn-primary btn-style mt-4">Send Message</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Contact Section -->
+    <footer class="text-white py-4" style="background-color: #333333;">
+        <div class="container">
+            <div class="row">
+                <!-- Left Column -->
+                <div class="col-lg-4 mb-4">
+                    <h4 class="fw-bold" style="font-size: 20px;">Newborn Screening Center Southern Luzon</h4>
+                    <p>
+                        Newborn Screening is a public health program that ensures all babies born in Philippines undergo screening for early identification of disorders (inborn errors of metabolism) that can lead to mental retardation and death.
+                    </p>
+                    <div>
+                        <a href="https://www.facebook.com/p/Southern-Luzon-NSC-100064428682142/" class="btn btn-danger btn-sm"><i class="fab fa-facebook-f"></i></a>
+                        <a href="mailto:admin@nscsl.com.ph" class="btn btn-danger btn-sm" title="Send Email">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                        <a href="https://ph.linkedin.com/company/dmmc-institute-of-health-sciences" class="btn btn-danger btn-sm"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+    
+                <!-- Contact Column -->
+                <div class="col-lg-4 mb-4">
+                    <h5 class="fw-bold">Contact</h5>
+                    <p>
+                        <i class="fas fa-map-marker-alt"></i> 
+                        <a href="https://www.google.com/maps/search/?api=1&query=3rd+Floor+DMMC-IHS+Building,+143+Narra+Street,+Mountview+Subd.,+Tanauan+City,+Batangas,+4232,+Philippines" 
+                        target="_blank" 
+                        class="location-link" 
+                        data-bs-toggle="tooltip" 
+                        title="View on Google Maps">
+                        3rd Floor DMMC-IHS Building, #143 Narra Street, Mountview Subd., Tanauan City, Batangas, 4232, Philippines
+                        </a>
+                    </p>
+    
+                    <div id="email-container">
+                        <p>
+                            <i class="fas fa-envelope me-2"></i> 
+                            <a href="mailto:admin@nscsl.com.ph" class="email-link" data-bs-toggle="tooltip" title="Email: admin@nscsl.com.ph">
+                                admin@nscsl.com.ph
+                            </a> 
+                            <button class="btn btn-sm btn-danger mt-2" id="toggle-email-btn" onclick="toggleEmails()"> + </button>
+                        </p>
+                        <div id="extra-emails" style="display: none;">
+                            <p><i class="fas fa-envelope me-2"></i> <a href="mailto:unsat@nscsl.com.ph" class="email-link" data-bs-toggle="tooltip" title="Email: unsat@nscsl.com.ph">unsat@nscsl.com.ph</a></p>
+                            <p><i class="fas fa-envelope me-2"></i> <a href="mailto:accounting1@nscsl.com.ph" class="email-link" data-bs-toggle="tooltip" title="Email: accounting1@nscsl.com.ph">accounting1@nscsl.com.ph</a></p>
+                            <p><i class="fas fa-envelope me-2"></i> <a href="mailto:accounting2@nscsl.com.ph" class="email-link" data-bs-toggle="tooltip" title="Email: accounting2@nscsl.com.ph">accounting2@nscsl.com.ph</a></p>
+                            <p><i class="fas fa-envelope me-2"></i> <a href="mailto:pdo1@nscsl.com.ph" class="email-link" data-bs-toggle="tooltip" title="Email: pdo1@nscsl.com.ph">pdo1@nscsl.com.ph</a></p>
+                            <p><i class="fas fa-envelope me-2"></i> <a href="mailto:pdo2@nscsl.com.ph" class="email-link" data-bs-toggle="tooltip" title="Email: pdo2@nscsl.com.ph">pdo2@nscsl.com.ph</a></p>
+                            <p><i class="fas fa-envelope me-2"></i> <a href="mailto:pdo3@nscsl.com.ph" class="email-link" data-bs-toggle="tooltip" title="Email: pdo3@nscsl.com.ph">pdo3@nscsl.com.ph</a></p>
+                            <p><i class="fas fa-envelope me-2"></i> <a href="mailto:pdolopez@nscsl.com.ph" class="email-link" data-bs-toggle="tooltip" title="Email: pdolopez@nscsl.com.ph">pdolopez@nscsl.com.ph</a></p>
+                            <p><i class="fas fa-envelope me-2"></i> <a href="mailto:programmngr@nscsl.com.ph" class="email-link" data-bs-toggle="tooltip" title="Email: programmngr@nscsl.com.ph">programmngr@nscsl.com.ph</a></p>
+                        </div>
+                    </div>
+    
+                    <!-- Phone Numbers with Tooltips -->
+                    <p>
+                        <i class="fas fa-phone-alt"></i> 
+                        <a href="tel:+639155432390" data-bs-toggle="tooltip" title="Call this number">+639155432390</a>
+                    </p>
+                    <p>
+                        <i class="fas fa-phone-alt"></i> 
+                        <a href="tel:+639239083301" data-bs-toggle="tooltip" title="Call this number">+639239083301</a>
+                    </p>
+                    <p>
+                        <i class="fas fa-phone-alt"></i> 
+                        <a href="tel:+639062179280" data-bs-toggle="tooltip" title="Call this number">+639062179280</a>
+                    </p>
+                    <p><i class="fas fa-fax"></i> (043) 341-6032</p>
+                </div>
+    
+                <!-- Extension Office Column -->
+                <div class="col-lg-4 mb-4">
+                    <!-- Extension Office Column -->
+                    <h5 class="fw-bold">Lopez Quezon Extension Office</h5>
+                    <p>
+                        <i class="fas fa-map-marker-alt"></i> 
+                        <a href="https://www.google.com/maps/place/Newborn+Screening+Center+-+Southern+Luzon+Lopez,+Quezon+Satellite+Office/@13.8860307,122.2628617,17z/data=!4m15!1m8!3m7!1s0x33a289fdde6be4e9:0xb7c841b60097d8c1!2sNewborn+Screening+Center+-+Southern+Luzon+Lopez,+Quezon+Satellite+Office!8m2!3d13.8860255!4d122.2654366!10e1!16s%2Fg%2F11p0bgyg_z!3m5!1s0x33a289fdde6be4e9:0xb7c841b60097d8c1!8m2!3d13.8860255!4d122.2654366!16s%2Fg%2F11p0bgyg_z?entry=ttu&g_ep=EgoyMDI1MDMyNC4wIKXMDSoASAFQAw%3D%3D" 
+                        target="_blank" 
+                        class="location-link" 
+                        data-bs-toggle="tooltip" 
+                        title="View on Google Maps">
+                        2nd Floor, Arago Building, Brgy. Danlagan, Lopez, Quezon
+                        </a>
+                    </p>
+
+                    <!-- Emails with Tooltips -->
+                    <p>
+                        <i class="fas fa-envelope me-2"></i> 
+                        <a href="mailto:pdolopez@nscsl.com.ph" class="email-link" data-bs-toggle="tooltip" title="Email: pdolopez@nscsl.com.ph">
+                            pdolopez@nscsl.com.ph
+                        </a>
+                    </p>
+                    <p>
+                        <i class="fas fa-envelope me-2"></i> 
+                        <a href="mailto:adminlopez@nscsl.com.ph" class="email-link" data-bs-toggle="tooltip" title="Email: adminlopez@nscsl.com.ph">
+                            adminlopez@nscsl.com.ph
+                        </a>
+                    </p>
+
+                    <!-- Phone Numbers with Tooltips -->
+                    <p>
+                        <i class="fas fa-phone-alt"></i> 
+                        <a href="tel:+639668631343" class="phone-link" data-bs-toggle="tooltip" title="Call this number">
+                            +639668631343
+                        </a>
+                    </p>
+                    <p>
+                        <i class="fas fa-phone-alt"></i> 
+                        <a href="tel:+639685960803" class="phone-link" data-bs-toggle="tooltip" title="Call this number">
+                            +639685960803
+                        </a>
+                    </p>
+                </div>
+
+            </div>
+    
+        </div>
+
+        
+        <!-- Move to top button -->
+        <button onclick="topFunction()" id="movetop" title="Go to top" style="background-color: #F27D0C; border: none; padding: 10px; border-radius: 20%; position: fixed; bottom: 20px; right: 20px;">
+            <span class="fas fa-arrow-up" style="color: white;"></span>
+        </button>
+
+    </footer>
+
+    
+    <p class="text-center py-2" style="background-color: white; color: #063FA1; font-weight: bold;">
+        &copy; 2024 Newborn Screening Southern Luzon. All rights reserved.
+    </p>
+    <!-- //footer -->
+    <!-- Js scripts -->
+    <!-- Template JavaScript -->
+    <script src="/js/jquery-3.3.1.min.js"></script>
+    <script src="/js/theme-change.js"></script>
+    <!--GMAIL-->
+    
+    <!-- //disable body scroll which navbar is in active -->
+    <!-- //bootstrap -->
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/contact.js"></script>
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>

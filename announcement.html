@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Announcements</title>
+    <link rel="icon" href="/images/ncslogo.ico" type="image/x-icon">
+
+    <link href="//fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,700;1,400;1,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.min.js"></script>
+
+    <link rel="stylesheet" href="/css/style-starter.css">
+    <link rel="stylesheet" href="/css/footer.css">
+    <link rel="stylesheet" href="/css/announcement.css">
+    <link rel="stylesheet" href="/css/facebook-header.css">
+    -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Announcements</title>
+    <link rel="icon" href="/images/ncslogo.ico" type="image/x-icon">
+
+    <!-- Google Fonts -->
+    <link href="//fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,700;1,400;1,600&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- PDF.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.min.js"></script>
+
+    <!-- Template CSS -->
+    <link rel="stylesheet" href="/css/style-starter.css">
+    <link rel="stylesheet" href="/css/footer.css">
+    <link rel="stylesheet" href="/css/announcement.css">
+    <link rel="stylesheet" href="/css/facebook-header.css">
+</head>
+<style>
+    body {
+        position: relative;
+        /* Remove the direct background from body */
+    }
+
+    /* Create a pseudo-element for the watermark background */
+    body::before {
+        content: "";
+        position: fixed; /* Fixed ensures it stays in place during scroll */
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: url("/images/LOGO NEWWWWWWW.jpg") no-repeat center center;
+        background-size: contain; /* or cover, depending on your preference */
+        background-attachment: fixed;
+        opacity: 0.04; /* Slightly higher opacity to see through navbar */
+        z-index: 9998; /* Above content but below navbar (navbar is z-index: 9999) */
+        pointer-events: none; /* Ensures it doesn't interfere with user interactions */
+    }
+
+    /* Make sure the header has proper fixed positioning */
+    #site-header {
+        background-color: #063FA1 !important;
+        z-index: 9999 !important;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        transition: all 0.3s ease;
+    }
+
+    /* Alternative approach - if you want the logo to repeat as a pattern */
+    body::after {
+        content: "";
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: url("/images/LOGO NEWWWWWWW.jpg") repeat;
+        background-size: 200px 200px; /* Adjust size as needed */
+        opacity: 0.03; /* Even lower opacity for repeated pattern */
+        z-index: -2;
+        pointer-events: none;
+        display: none; /* Enable this if you want the repeated pattern instead */
+    }
+</style>
+<body>
+    <!--/Header-->
+    <header id="site-header" class="fixed-top">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light stroke py-lg-0">
+                <h1>
+                    <img src="/images/dmmc.jpg" alt="DMMC IHS Logo" style="height: 30px;"> <!-- Adjust height as needed -->
+                    <img src="/images/LOGO NEWWWWWWW.jpg" alt="NSC SL Logo" style="height: 30px;"> <!-- Adjust height as needed -->
+                    <a class="navbar-brand pe-xl-5 pe-lg-4" href="index.html">
+                        <span class="sublog">NSC</span>SL
+                    </a>
+                </h1>
+                <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon fa icon-expand fa-bars"></span>
+                    <span class="navbar-toggler-icon fa icon-close fa-times"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarScroll">
+                    <ul class="navbar-nav me-lg-auto my-2 my-lg-0 navbar-nav-scroll">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="event.html">Events</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="resources.html">Resources</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link active" href="announcement.html">Announcements</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contact</a>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav ms-auto align-items-center">
+                        <li class="nav-item d-flex align-items-center">
+                            <a class="nav-link d-flex align-items-center" href="https://www.facebook.com/p/Southern-Luzon-NSC-100064428682142/" target="_blank" title="Follow us on Facebook">
+                                <i class="fab fa-facebook-f me-2" style="color: white; font-size: 18px;"></i>
+                                <span class="text-white">NSC Southern Luzon</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- breadcrumb -->
+    <section class="w3l-about-breadcrumb">
+        <div class="breadcrumb-bg breadcrumb-bg-about">
+            <div class="container py-lg-5 py-sm-4">
+                <div class="w3breadcrumb-gids text-center">
+                    <div class="w3breadcrumb-info mt-5">
+                        <h2 class="w3ltop-title pt-4">Announcements of Newborn Screening Center Southern Luzon</h2>
+                        <!--
+                        <ul class="breadcrumbs-custom-path">
+                            <li><a href="index.html">Home</a></li>
+                            <li class="active"><span class="fas fa-angle-double-right mx-2"></span> About </li>
+                        </ul>
+                        -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <section style="padding: 60px 0;">
+        <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+
+                </div>
+        
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="/images/Announcements/august_2.jpg" class="img-fluid mx-auto d-block" alt="Announcement 1">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Ninoy Aquino Day</h5>
+                            <p>August 21, 2025</p>
+                        </div>
+                    </div>
+        
+                    <div class="carousel-item">
+                        <img src="/images/Announcements/august_1.jpg" class="img-fluid mx-auto d-block" alt="Announcement 2">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>National Heroes Day</h5>
+                            <p>August 25, 2025</p>
+                        </div>
+                    </div>
+                    <!--
+                    <div class="carousel-item">
+                        <img src="/images/Announcements/3.jpg" class="img-fluid mx-auto d-block" alt="Announcement 3">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Maundy Thursday & Good Friday</h5>
+                            <p>April 17 & 18, 2025</p>
+                        </div>
+                    </div>
+                    -->
+                </div>
+
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Announcements Section
+    <section style="padding: 60px 0; text-align: center;">
+        <div class="container">
+            <div class="alert alert-info" role="alert" style="font-size: 1.2rem;">
+                📢 There are no announcements at this time. Please check back later!
+            </div>
+        </div>
+    </section>
+     -->
+    
+    
+    <footer class="text-white py-4" style="background-color: #333333;">
+        <div class="container">
+            <div class="row">
+                <!-- Left Column -->
+                <div class="col-lg-4 mb-4">
+                    <h4 class="fw-bold" style="font-size: 20px;">Newborn Screening Center Southern Luzon</h4>
+                    <p>
+                        Newborn Screening is a public health program that ensures all babies born in Philippines undergo screening for early identification of disorders (inborn errors of metabolism) that can lead to mental retardation and death.
+                    </p>
+                    <div>
+                        <a href="https://www.facebook.com/p/Southern-Luzon-NSC-100064428682142/" class="btn btn-danger btn-sm"><i class="fab fa-facebook-f"></i></a>
+                        <a href="mailto:admin@nscsl.com.ph" class="btn btn-danger btn-sm" title="Send Email">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                        <a href="https://ph.linkedin.com/company/dmmc-institute-of-health-sciences" class="btn btn-danger btn-sm"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+    
+                <!-- Contact Column -->
+                <div class="col-lg-4 mb-4">
+                    <h5 class="fw-bold">Contact</h5>
+                    <p>
+                        <i class="fas fa-map-marker-alt"></i> 
+                        <a href="https://www.google.com/maps/search/?api=1&query=3rd+Floor+DMMC-IHS+Building,+143+Narra+Street,+Mountview+Subd.,+Tanauan+City,+Batangas,+4232,+Philippines" 
+                        target="_blank" 
+                        class="location-link" 
+                        data-bs-toggle="tooltip" 
+                        title="View on Google Maps">
+                        3rd Floor DMMC-IHS Building, #143 Narra Street, Mountview Subd., Tanauan City, Batangas, 4232, Philippines
+                        </a>
+                    </p>
+    
+                    <div id="email-container">
+                        <p>
+                            <i class="fas fa-envelope me-2"></i> 
+                            <a href="mailto:admin@nscsl.com.ph" class="email-link" data-bs-toggle="tooltip" title="Email: admin@nscsl.com.ph">
+                                admin@nscsl.com.ph
+                            </a> 
+                            <button class="btn btn-sm btn-danger mt-2" id="toggle-email-btn" onclick="toggleEmails()"> + </button>
+                        </p>
+                        <div id="extra-emails" style="display: none;">
+                            <p><i class="fas fa-envelope me-2"></i> <a href="mailto:unsat@nscsl.com.ph" class="email-link" data-bs-toggle="tooltip" title="Email: unsat@nscsl.com.ph">unsat@nscsl.com.ph</a></p>
+                            <p><i class="fas fa-envelope me-2"></i> <a href="mailto:accounting1@nscsl.com.ph" class="email-link" data-bs-toggle="tooltip" title="Email: accounting1@nscsl.com.ph">accounting1@nscsl.com.ph</a></p>
+                            <p><i class="fas fa-envelope me-2"></i> <a href="mailto:accounting2@nscsl.com.ph" class="email-link" data-bs-toggle="tooltip" title="Email: accounting2@nscsl.com.ph">accounting2@nscsl.com.ph</a></p>
+                            <p><i class="fas fa-envelope me-2"></i> <a href="mailto:pdo1@nscsl.com.ph" class="email-link" data-bs-toggle="tooltip" title="Email: pdo1@nscsl.com.ph">pdo1@nscsl.com.ph</a></p>
+                            <p><i class="fas fa-envelope me-2"></i> <a href="mailto:pdo2@nscsl.com.ph" class="email-link" data-bs-toggle="tooltip" title="Email: pdo2@nscsl.com.ph">pdo2@nscsl.com.ph</a></p>
+                            <p><i class="fas fa-envelope me-2"></i> <a href="mailto:pdo3@nscsl.com.ph" class="email-link" data-bs-toggle="tooltip" title="Email: pdo3@nscsl.com.ph">pdo3@nscsl.com.ph</a></p>
+                            <p><i class="fas fa-envelope me-2"></i> <a href="mailto:pdolopez@nscsl.com.ph" class="email-link" data-bs-toggle="tooltip" title="Email: pdolopez@nscsl.com.ph">pdolopez@nscsl.com.ph</a></p>
+                            <p><i class="fas fa-envelope me-2"></i> <a href="mailto:programmngr@nscsl.com.ph" class="email-link" data-bs-toggle="tooltip" title="Email: programmngr@nscsl.com.ph">programmngr@nscsl.com.ph</a></p>
+                        </div>
+                    </div>
+    
+                    <!-- Phone Numbers with Tooltips -->
+                    <p>
+                        <i class="fas fa-phone-alt"></i> 
+                        <a href="tel:+639155432390" data-bs-toggle="tooltip" title="Call this number">+639155432390</a>
+                    </p>
+                    <p>
+                        <i class="fas fa-phone-alt"></i> 
+                        <a href="tel:+639239083301" data-bs-toggle="tooltip" title="Call this number">+639239083301</a>
+                    </p>
+                    <p>
+                        <i class="fas fa-phone-alt"></i> 
+                        <a href="tel:+639062179280" data-bs-toggle="tooltip" title="Call this number">+639062179280</a>
+                    </p>
+                    <p><i class="fas fa-fax"></i> (043) 341-6032</p>
+                </div>
+    
+                <!-- Extension Office Column -->
+                <div class="col-lg-4 mb-4">
+                    <!-- Extension Office Column -->
+                    <h5 class="fw-bold">Lopez Quezon Extension Office</h5>
+                    <p>
+                        <i class="fas fa-map-marker-alt"></i> 
+                        <a href="https://www.google.com/maps/place/Newborn+Screening+Center+-+Southern+Luzon+Lopez,+Quezon+Satellite+Office/@13.8860307,122.2628617,17z/data=!4m15!1m8!3m7!1s0x33a289fdde6be4e9:0xb7c841b60097d8c1!2sNewborn+Screening+Center+-+Southern+Luzon+Lopez,+Quezon+Satellite+Office!8m2!3d13.8860255!4d122.2654366!10e1!16s%2Fg%2F11p0bgyg_z!3m5!1s0x33a289fdde6be4e9:0xb7c841b60097d8c1!8m2!3d13.8860255!4d122.2654366!16s%2Fg%2F11p0bgyg_z?entry=ttu&g_ep=EgoyMDI1MDMyNC4wIKXMDSoASAFQAw%3D%3D" 
+                        target="_blank" 
+                        class="location-link" 
+                        data-bs-toggle="tooltip" 
+                        title="View on Google Maps">
+                        2nd Floor, Arago Building, Brgy. Danlagan, Lopez, Quezon
+                        </a>
+                    </p>
+
+                    <!-- Emails with Tooltips -->
+                    <p>
+                        <i class="fas fa-envelope me-2"></i> 
+                        <a href="mailto:pdolopez@nscsl.com.ph" class="email-link" data-bs-toggle="tooltip" title="Email: pdolopez@nscsl.com.ph">
+                            pdolopez@nscsl.com.ph
+                        </a>
+                    </p>
+                    <p>
+                        <i class="fas fa-envelope me-2"></i> 
+                        <a href="mailto:adminlopez@nscsl.com.ph" class="email-link" data-bs-toggle="tooltip" title="Email: adminlopez@nscsl.com.ph">
+                            adminlopez@nscsl.com.ph
+                        </a>
+                    </p>
+
+                    <!-- Phone Numbers with Tooltips -->
+                    <p>
+                        <i class="fas fa-phone-alt"></i> 
+                        <a href="tel:+639668631343" class="phone-link" data-bs-toggle="tooltip" title="Call this number">
+                            +639668631343
+                        </a>
+                    </p>
+                    <p>
+                        <i class="fas fa-phone-alt"></i> 
+                        <a href="tel:+639685960803" class="phone-link" data-bs-toggle="tooltip" title="Call this number">
+                            +639685960803
+                        </a>
+                    </p>
+                </div>
+
+            </div>
+    
+        </div>
+
+        
+        <!-- Move to top button -->
+        <button onclick="topFunction()" id="movetop" title="Go to top" style="background-color: #F27D0C; border: none; padding: 10px; border-radius: 20%; position: fixed; bottom: 20px; right: 20px;">
+            <span class="fas fa-arrow-up" style="color: white;"></span>
+        </button>
+
+    </footer>
+
+    
+    <p class="text-center py-2" style="background-color: white; color: #063FA1; font-weight: bold;">
+        &copy; 2024 Newborn Screening Southern Luzon. All rights reserved.
+    </p>
+    <!-- //footer -->
+    <!-- Js scripts -->
+    <!-- Template JavaScript -->
+    <script src="/js/jquery-3.3.1.min.js"></script>
+    <script src="/js/theme-change.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+
+
+    <script src="/js/announcement.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+</html>
