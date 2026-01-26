@@ -1,0 +1,368 @@
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: black;
+}
+
+.carousel-indicators li {
+    background-color: black;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.9);
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #999;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Invert the colors: deep blue background and light blue text */
+
+ /* Entire header background */
+#site-header {
+    background-color: #063FA1; /* Deep blue background */
+    padding: 10px 0; /* Reduces the overall padding */
+    transition: padding 0.3s ease; /* Smooth transition on scroll (optional) */
+}
+
+/* Navbar background */
+#site-header .navbar {
+    background-color: #063FA1; /* Deep blue background */
+}
+
+/* Adjust the 'NSC SL' text to white */
+#site-header .navbar-brand .sublog {
+    color: white; /* White for 'NSC' */
+}
+
+#site-header .navbar-brand {
+    color: white; /* White for 'SL' */
+}
+
+/* Style the nav links to white */
+#site-header .navbar .nav-link {
+    color: white; /* White text for nav links */
+}
+
+/* Active link color */
+#site-header .navbar .nav-link.active {
+    color: #f0f0f0; /* Slightly off-white for active links */
+}
+
+/* Optional: Adjust padding or other styles */
+#site-header .navbar {
+    padding: 15px 0;
+}
+
+/* styling for the nav links */
+/* Underline for the active page */
+.navbar-nav .nav-link.active {
+    position: relative;
+    color: white; /* Text color for the active link */
+    text-decoration: none;
+}
+
+.navbar-nav .nav-link.active::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 2px;
+    background-color: currentColor; /* Inherit the color of the link */
+    width: 100%;
+}
+
+/* Animated underline on hover */
+.navbar-nav .nav-link {
+    position: relative;
+    display: inline-block;
+    color: white; /* Link text color */
+    text-decoration: none;
+}
+
+.navbar-nav .nav-link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 2px;
+    background-color: currentColor; /* Inherit the color of the link */
+    width: 0;
+    transition: width 0.3s ease-in-out; /* Smooth animation */
+}
+
+.navbar-nav .nav-link:hover::after {
+    width: 100%; /* Full underline on hover */
+}
+
+/* Dropdown menu styling */
+.dropdown-menu {
+    background-color: white; /* Default background color of the dropdown */
+    border: none; /* Remove default border */
+}
+
+/* Dropdown menu item hover effect */
+.dropdown-menu .dropdown-item:hover {
+    background-color: #063FA1; /* Deep blue background on hover */
+    color: white; /* White text on hover */
+}
+
+/* Optional: Adjust padding or spacing */
+.navbar-nav .nav-item {
+    margin-right: 15px; /* Space between items */
+}
+
+.slider-image {
+width: 100%; /* Make the image take the full width of the parent */
+height: 400px; /* Set a fixed height for the images */
+object-fit: cover; /* Ensure the image covers the area without stretching */
+}
+
+.navbar-brand img {
+    height: 30px; /* Adjust the logo height to your preferred size */
+    max-height: 30px;
+}
+
+.navbar {
+    padding: 0.5rem 0; /* Reduce navbar padding */
+}
+
+/* Optional: Smaller header on scroll */
+.fixed-top.scrolled {
+    padding: 5px 0; /* Reduce padding when scrolling */
+}
+
+/* STORIES SECTION */
+.radius-image {
+    border-radius: 0.25rem;
+}
+
+/* Ensure images are responsive */
+.card-img-top {
+width: 100%;
+height: auto;
+}
+
+/* Large image for the featured story */
+.large-image {
+height: 100%;
+width: 100%;
+object-fit: cover;
+max-height: 400px; /* This limits the large image height */
+}
+
+/* Smaller images for the right-side stories */
+.small-image {
+height: 100%;
+width: 100%;
+object-fit: cover;
+max-height: 120px; /* Limit the height of the smaller images */
+}
+
+/* Card hover effect */
+.card {
+transition: transform 0.3s ease;
+}
+
+.card:hover {
+transform: scale(1.05);
+}
+
+/* Preloader background covering the whole page */
+#preloader {
+position: fixed;
+left: 0;
+top: 0;
+width: 100%;
+height: 100%;
+z-index: 9999;
+background-color: #fff; /* Change color to match your design */
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+/* Circle style */
+.circle {
+width: 100px; /* Adjust size as needed */
+height: 100px; /* Adjust size as needed */
+border-radius: 50%;
+overflow: hidden;
+display: flex;
+justify-content: center;
+align-items: center;
+animation: rotate 2s linear infinite; /* Optional rotation animation */
+}
+
+/* Image style */
+.circle img {
+width: 100%; /* Make image fit the circle */
+height: auto; /* Maintain aspect ratio */
+}
+
+/* Optional rotation animation */
+@keyframes rotate {
+0% { transform: rotate(0deg); }
+100% { transform: rotate(360deg); }
+}
+
+#menu {
+position: fixed;
+top: 120px; /* Adjust this as necessary */
+left: -250px; /* Start hidden */
+width: 250px; /* Width of the menu */
+background: #063FA1; /* Menu background color */
+z-index: 9999; /* Make sure it stays on top */
+transition: left 0.3s ease; /* Smooth transition */
+}
+
+#menu ul {
+margin: 0;
+padding: 0;
+}
+
+#menu ul li {
+margin: 0;
+list-style: none;
+display: block;
+line-height: 30px; /* Height of each link */
+border-bottom: 1px solid #ffff; /* Bottom border for each item */
+padding-left: 5px; /* Left padding for list items */
+}
+
+#menu ul li a {
+padding: 6px 0; /* Padding around link */
+color: #FFFFFF; /* Link color */
+font-size: 14px; /* Font size for links */
+display: block; /* Make link block level */
+text-decoration: none; /* Remove underline */
+}
+
+.menu_icon {
+position: fixed;
+left: 0; /* Position icon on the edge */
+top: 149px; /* Adjust this as necessary */
+width: 120px; /* Width of the icon area */
+height: 50px; /* Height of the icon area */
+color: #fff; /* Icon color */
+background: #063FA1; /* Icon background color */
+padding: 12px 6px; /* Padding for icon */
+z-index: 9999; /* Make sure it stays on top */
+cursor: pointer; /* Change cursor on hover */
+text-align: center; /* Center the text */
+transition: left 0.3s ease; /* Smooth transition */
+display: flex; /* Use flexbox for alignment */
+justify-content: center; /* Center the content horizontally */
+align-items: center; /* Center the content vertically */
+}
+
+.menu_icon:hover {
+color: #E3E3E3; /* Hover effect on icon */
+}
+
+.partners-section img {
+transition: transform 0.3s ease; /* Smooth transition for the zoom effect */
+}
+
+.partners-section img:hover {
+transform: scale(1.1); /* Zooms in the image slightly */
+}
+
+.image-container {
+position: relative;
+width: 100%;
+padding-top: 100%; /* Makes the container square */
+overflow: hidden;
+}
+
+.image-container img {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+object-fit: cover; /* Ensures the image covers the container */
+border-radius: 8px; /* Optional: for rounded corners */
+}
+
+.radius-image {
+border-radius: 8px;
+}
+
+.card {
+transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+transform: translateY(-5px); /* Adds a subtle hover effect */
+box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+.image-container {
+    padding-top: 75%; /* Adjust for smaller screens */
+}
+}
+
+footer h4, footer h5 {
+    font-weight: bold !important; /* Titles will be bold */
+    font-size: 1.2rem; /* Adjust title size */
+    text-align: center;
+}
+
+footer p, footer a{
+    color: #ffffff !important;
+    font-size: 0.9rem; /* Makes text smaller */
+    font-weight: normal !important; /* Ensures text is NOT bold */
+}
+
+footer a:hover {
+    color: #FFD700 !important; /* Gold on hover */
+}
+
+footer .contact-info {
+    opacity: 1 !important;
+}
+
+.email-link, .location-link {
+    text-decoration: none !important;
+    color: white !important; /* Ensures visibility */
+}
+
+.email-link:hover, .location-link:hover {
+    color: #FFD700 !important; /* Changes color on hover */
+}
+
+.faq-img {
+    padding-top: 80px;
+}

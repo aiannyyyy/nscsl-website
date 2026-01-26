@@ -1,0 +1,281 @@
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: black;
+}
+
+.carousel-indicators li {
+    background-color: black;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.9);
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+    .close:hover,
+    .close:focus {
+        color: #999;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+  /* Entire header background */
+  #site-header {
+    background-color: #063FA1; /* Deep blue background */
+}
+
+/* Navbar background */
+#site-header .navbar {
+    background-color: #063FA1; /* Deep blue background */
+}
+
+/* Adjust the 'NSC SL' text to white */
+#site-header .navbar-brand .sublog {
+    color: white; /* White for 'NSC' */
+}
+#site-header .navbar-brand {
+    color: white; /* White for 'SL' */
+}
+
+/* Style the nav links to white */
+#site-header .navbar .nav-link {
+    color: white; /* White text for nav links */
+}
+
+/* Active link color */
+#site-header .navbar .nav-link.active {
+    color: #f0f0f0; /* Slightly off-white for active links */
+}
+
+/* Optional: Adjust padding or other styles */
+#site-header .navbar {
+    padding: 15px 0;
+}
+
+
+
+/* Optional: Adjust padding or other styles */
+#site-header .navbar {
+    padding: 15px 0;
+}
+
+
+/* styling for the nav links */
+/* Underline for the active page */
+.navbar-nav .nav-link.active {
+    position: relative;
+    color: white; /* Text color for the active link */
+    text-decoration: none;
+}
+
+.navbar-nav .nav-link.active::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 2px;
+    background-color: currentColor; /* Inherit the color of the link */
+    width: 100%;
+}
+
+/* Animated underline on hover */
+.navbar-nav .nav-link {
+    position: relative;
+    display: inline-block;
+    color: white; /* Link text color */
+    text-decoration: none;
+}
+
+.navbar-nav .nav-link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 2px;
+    background-color: currentColor; /* Inherit the color of the link */
+    width: 0;
+    transition: width 0.3s ease-in-out; /* Smooth animation */
+}
+
+.navbar-nav .nav-link:hover::after {
+    width: 100%; /* Full underline on hover */
+}
+
+/* Dropdown menu styling */
+.dropdown-menu {
+    background-color: white; /* Default background color of the dropdown */
+    border: none; /* Remove default border */
+}
+
+/* Dropdown menu item hover effect */
+.dropdown-menu .dropdown-item:hover {
+    background-color: #063FA1; /* Deep blue background on hover */
+    color: white; /* White text on hover */
+}
+
+/* Optional: Adjust padding or spacing */
+.navbar-nav .nav-item {
+    margin-right: 15px; /* Space between items */
+}
+    /* Preloader background covering the whole page */
+#preloader {
+position: fixed;
+left: 0;
+top: 0;
+width: 100%;
+height: 100%;
+z-index: 9999;
+background-color: #fff; /* Change color to match your design */
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+/* Circle style */
+.circle {
+width: 100px; /* Adjust size as needed */
+height: 100px; /* Adjust size as needed */
+border-radius: 50%;
+overflow: hidden;
+display: flex;
+justify-content: center;
+align-items: center;
+animation: rotate 2s linear infinite; /* Optional rotation animation */
+}
+
+/* Image style */
+.circle img {
+width: 100%; /* Make image fit the circle */
+height: auto; /* Maintain aspect ratio */
+}
+
+/* Optional rotation animation */
+@keyframes rotate {
+0% { transform: rotate(0deg); }
+100% { transform: rotate(360deg); }
+}
+
+footer h4, footer h5 {
+    font-weight: bold !important; /* Titles will be bold */
+    font-size: 1.2rem; /* Adjust title size */
+    text-align: center;
+}
+
+footer p, footer a{
+    color: #ffffff !important;
+    font-size: 0.9rem; /* Makes text smaller */
+    font-weight: normal !important; /* Ensures text is NOT bold */
+}
+
+footer a:hover {
+    color: #FFD700 !important; /* Gold on hover */
+}
+
+footer .contact-info {
+    opacity: 1 !important;
+}
+
+.email-link, .location-link {
+    text-decoration: none !important;
+    color: white !important; /* Ensures visibility */
+}
+
+.email-link:hover, .location-link:hover {
+    color: #FFD700 !important; /* Changes color on hover */
+}
+
+
+.event-table {
+width: 100%;
+border-collapse: separate;
+border-spacing: 0;
+margin-top: 1rem;
+background-color: #fff;
+border-radius: 12px;
+overflow: hidden;
+box-shadow: 0 2px 10px rgba(6, 63, 161, 0.05);
+}
+
+.event-table th {
+background-color: #063FA1;
+color: #fff;
+text-align: left;
+padding: 12px 16px;
+font-weight: 600;
+font-size: 0.95rem;
+}
+
+.event-table td {
+padding: 10px 16px;
+border-bottom: 1px solid #eee;
+font-size: 0.95rem;
+color: #333;
+}
+
+.event-table tr:last-child td {
+border-bottom: none;
+}
+
+.event-table tr:hover {
+background-color: #f5f8ff;
+transition: 0.2s ease;
+}
+
+@media (max-width: 768px) {
+.event-table thead {
+    display: none;
+}
+.event-table, .event-table tbody, .event-table tr, .event-table td {
+    display: block;
+    width: 100%;
+}
+.event-table tr {
+    margin-bottom: 1rem;
+    border: 1px solid #eee;
+    border-radius: 10px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+    padding: 10px;
+    background-color: #fff;
+}
+.event-table td {
+    padding: 8px 10px;
+    border: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.event-table td::before {
+    content: attr(data-label);
+    font-weight: 600;
+    color: #063FA1;
+    flex-basis: 45%;
+    text-align: left;
+}
+}

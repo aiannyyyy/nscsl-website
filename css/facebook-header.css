@@ -1,0 +1,7 @@
+.nav-link:hover i.fab.fa-facebook-f {
+    color: #cccccc; /* Slightly lighter on hover */
+}
+
+.nav-link:hover span {
+    color: #cccccc;
+}

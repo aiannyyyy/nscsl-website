@@ -1,0 +1,35 @@
+  /* Style for email links */
+  .email-link {
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+}
+
+.email-link:hover {
+    text-decoration: underline;
+    color: #0056b3;
+}
+
+/* Style for phone link */
+.phone-link {
+    text-decoration: none;
+    color: #28a745;
+    font-weight: bold;
+}
+
+.phone-link:hover {
+    text-decoration: underline;
+    color: #1e7e34;
+}
+
+ /* Style for address link */
+.address-link {
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+}
+
+.address-link:hover {
+    text-decoration: underline;
+    color: #0056b3;
+}

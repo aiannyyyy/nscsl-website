@@ -1,0 +1,755 @@
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: black;
+}
+
+.carousel-indicators li {
+    background-color: black;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.9);
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #999;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.carousel-item {
+    display: flex;
+    align-items: center;
+}
+.carousel-item img {
+    max-height: 100px; /* Adjust the height as needed */
+    width: auto;
+    margin: 0 auto;
+}
+.carousel-inner {
+    transition: transform 1s ease; /* Adjust the transition duration as needed */
+}
+
+
+  /* Entire header background */
+  #site-header {
+    background-color: #063FA1; /* Deep blue background */
+}
+
+/* Navbar background */
+#site-header .navbar {
+    background-color: #063FA1; /* Deep blue background */
+}
+
+/* Adjust the 'NSC SL' text to white */
+#site-header .navbar-brand .sublog {
+    color: white; /* White for 'NSC' */
+}
+#site-header .navbar-brand {
+    color: white; /* White for 'SL' */
+}
+
+/* Style the nav links to white */
+#site-header .navbar .nav-link {
+    color: white; /* White text for nav links */
+}
+
+/* Active link color */
+#site-header .navbar .nav-link.active {
+    color: #f0f0f0; /* Slightly off-white for active links */
+}
+
+/* Optional: Adjust padding or other styles */
+#site-header .navbar {
+    padding: 15px 0;
+}
+
+
+/* Optional: Adjust padding or other styles */
+#site-header .navbar {
+    padding: 15px 0;
+}
+
+
+/* styling for the nav links */
+/* Underline for the active page */
+.navbar-nav .nav-link.active {
+    position: relative;
+    color: white; /* Text color for the active link */
+    text-decoration: none;
+}
+
+.navbar-nav .nav-link.active::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 2px;
+    background-color: currentColor; /* Inherit the color of the link */
+    width: 100%;
+}
+
+/* Animated underline on hover */
+.navbar-nav .nav-link {
+    position: relative;
+    display: inline-block;
+    color: white; /* Link text color */
+    text-decoration: none;
+}
+
+.navbar-nav .nav-link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 2px;
+    background-color: currentColor; /* Inherit the color of the link */
+    width: 0;
+    transition: width 0.3s ease-in-out; /* Smooth animation */
+}
+
+.navbar-nav .nav-link:hover::after {
+    width: 100%; /* Full underline on hover */
+}
+
+/* Dropdown menu styling */
+.dropdown-menu {
+    background-color: white; /* Default background color of the dropdown */
+    border: none; /* Remove default border */
+}
+
+/* Dropdown menu item hover effect */
+.dropdown-menu .dropdown-item:hover {
+    background-color: #063FA1; /* Deep blue background on hover */
+    color: white; /* White text on hover */
+}
+
+/* Optional: Adjust padding or spacing */
+.navbar-nav .nav-item {
+    margin-right: 15px; /* Space between items */
+}
+
+#menu {
+position: fixed;
+top: 120px; /* Adjust this as necessary */
+left: -250px; /* Start hidden */
+width: 250px; /* Width of the menu */
+background: #063FA1; /* Menu background color */
+z-index: 9999; /* Make sure it stays on top */
+transition: left 0.3s ease; /* Smooth transition */
+}
+
+#menu ul {
+margin: 0;
+padding: 0;
+}
+
+#menu ul li {
+margin: 0;
+list-style: none;
+display: block;
+line-height: 30px; /* Height of each link */
+border-bottom: 1px solid #ffff; /* Bottom border for each item */
+padding-left: 5px; /* Left padding for list items */
+}
+
+#menu ul li a {
+padding: 6px 0; /* Padding around link */
+color: #FFFFFF; /* Link color */
+font-size: 14px; /* Font size for links */
+display: block; /* Make link block level */
+text-decoration: none; /* Remove underline */
+}
+
+.menu_icon {
+position: fixed;
+left: 0; /* Position icon on the edge */
+top: 149px; /* Adjust this as necessary */
+width: 120px; /* Width of the icon area */
+height: 50px; /* Height of the icon area */
+color: #fff; /* Icon color */
+background: #063FA1; /* Icon background color */
+padding: 12px 6px; /* Padding for icon */
+z-index: 9999; /* Make sure it stays on top */
+cursor: pointer; /* Change cursor on hover */
+text-align: center; /* Center the text */
+transition: left 0.3s ease; /* Smooth transition */
+display: flex; /* Use flexbox for alignment */
+justify-content: center; /* Center the content horizontally */
+align-items: center; /* Center the content vertically */
+}
+
+
+.menu_icon:hover {
+color: #E3E3E3; /* Hover effect on icon */
+}
+
+/* Apply modern fonts */
+body {
+font-family: 'Roboto', sans-serif; /* Add any modern font you like */
+}
+
+/* Enhance Mission Section 
+.mission-title {
+font-size: 2rem;
+font-weight: 700;
+color: #063FA1;
+margin-bottom: 1.5rem;
+}
+
+.mission-text {
+font-size: 1.1rem;
+line-height: 1.6;
+color: #555;
+margin-bottom: 1rem;
+}
+
+.mission-list {
+list-style-type: none;
+padding-left: 0;
+margin-top: 1rem;
+}
+
+.mission-list li {
+font-size: 1.1rem;
+color: #555;
+margin-bottom: 0.8rem;
+}
+
+.mission-list li span {
+color: #063FA1;
+margin-right: 10px;
+}
+
+
+.vision-title {
+font-size: 2rem;
+font-weight: 700;
+color: #063FA1; 
+margin-bottom: 1.5rem;
+}
+
+.vision-text {
+font-size: 1.2rem;
+line-height: 1.6;
+color: #555;
+margin-bottom: 1.5rem;
+}
+
+*/
+/* Preloader background covering the whole page */
+#preloader {
+position: fixed;
+left: 0;
+top: 0;
+width: 100%;
+height: 100%;
+z-index: 9999;
+background-color: #fff; /* Change color to match your design */
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+/* Circle style */
+.circle {
+width: 100px; /* Adjust size as needed */
+height: 100px; /* Adjust size as needed */
+border-radius: 50%;
+overflow: hidden;
+display: flex;
+justify-content: center;
+align-items: center;
+animation: rotate 2s linear infinite; /* Optional rotation animation */
+}
+
+/* Image style */
+.circle img {
+width: 100%; /* Make image fit the circle */
+height: auto; /* Maintain aspect ratio */
+}
+
+/* Optional rotation animation */
+@keyframes rotate {
+0% { transform: rotate(0deg); }
+100% { transform: rotate(360deg); }
+}
+
+footer h4, footer h5 {
+    font-weight: bold !important; /* Titles will be bold */
+    font-size: 1.2rem; /* Adjust title size */
+    text-align: center;
+}
+
+footer p, footer a{
+    color: #ffffff !important;
+    font-size: 0.9rem; /* Makes text smaller */
+    font-weight: normal !important; /* Ensures text is NOT bold */
+}
+
+footer a:hover {
+    color: #FFD700 !important; /* Gold on hover */
+}
+
+footer .contact-info {
+    opacity: 1 !important;
+}
+
+.email-link, .location-link {
+    text-decoration: none !important;
+    color: white !important; /* Ensures visibility */
+}
+
+.email-link:hover, .location-link:hover {
+    color: #FFD700 !important; /* Changes color on hover */
+}
+
+.about-pic{
+    width: 75%;
+}
+
+
+    .container {
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 15px;
+    }
+
+    .row {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .about-section {
+        width: 48%;
+        margin-bottom: 30px;
+    }
+
+    .section-title {
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 20px;
+    }
+
+    .section-content {
+        padding: 15px;
+        background-color: #f9f9f9;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .image-container {
+        margin-bottom: 20px;
+    }
+
+    .img-fluid {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+    }
+
+    .mission-text, .vision-text {
+        font-size: 16px;
+        color: #333;
+    }
+
+    .mission-list {
+        list-style: none;
+        padding-left: 0;
+    }
+
+    .mission-list li {
+        margin: 10px 0;
+        font-size: 16px;
+    }
+
+    .fa-check-circle {
+        color: green;
+        margin-right: 10px;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+        .about-section {
+            width: 100%;
+        }
+    }
+
+/* Custom tab styling */
+.custom-tabs .nav-link {
+    font-weight: 500;
+    color: #000;
+    border: none;
+    border-bottom: 3px solid transparent;
+    margin: 0 15px;
+    font-size: 18px;
+}
+
+.custom-tabs .nav-link.active {
+    color: #063FA1;
+    font-weight: bold;
+    border-bottom: 4px solid #063FA1;
+    background-color: transparent;
+}
+
+.accordion-content ul {
+    list-style-type: disc; /* normal solid bullet */
+    padding-left: 30px; /* make space so bullets are visible */
+  }
+
+/* Default hidden */
+.accordion-item.scrollable .accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.25s ease-out;
+}
+
+/* When opened */
+.accordion-item.scrollable button[aria-expanded="true"] + .accordion-content {
+  max-height: 250px;   /* fixed scroll area */
+  overflow-y: auto;    /* enable scrolling if content is longer */
+  padding-right: 10px;
+}
+
+/* table container */
+.table_component {
+    overflow: auto;
+    width: 100%;
+    text-align: center; /* center the inner table */
+    padding: 20px 0; /* optional: add some vertical spacing */
+}
+
+/* actual table */
+.table_component table {
+    margin: 0 auto; /* center the table */
+    border: 1px double #676774;
+    width: 90%;
+    table-layout: fixed;
+    border-collapse: collapse;
+    border-spacing: 1px;
+    text-align: left; /* text inside cells is still left-aligned */
+    font-size: 18px; /* bigger font for table content */
+}
+
+/* caption above the table */
+.table_component caption {
+    caption-side: top;
+    text-align: left;
+    font-size: 20px; /* slightly bigger font for caption */
+    color: black;
+    margin-bottom: 10px;
+    padding-left: 5px; /* optional: small padding on the left */
+}
+
+/* header cells */
+.table_component th {
+    border: 1px double #676774;
+    background-color: #063FA1;
+    color: #ffffff;
+    padding: 10px; /* increased padding */
+    font-size: 18px;
+}
+
+/* regular cells */
+.table_component td {
+    border: 1px double #676774;
+    padding: 10px; /* increased padding */
+    font-size: 18px;
+}
+
+/* alternate row coloring */
+.table_component tr:nth-child(even) td {
+    background-color: #ededed;
+    color: #000000;
+}
+
+.table_component tr:nth-child(odd) td {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;  /* Changed from center to flex-start */
+    text-align: left;         /* Changed from center to left */
+    margin: 0 auto;
+    width: 80%;
+    padding-left: 40px;       /* Added left padding for indentation */
+}
+
+/* Make sure <br> tags create proper line breaks */
+.content br {
+    display: block;
+    content: "";
+    margin-top: 16px;  /* Adjust this value to control spacing */
+}
+
+/* Optional: If you want different indentation for specific elements */
+.content h5 {
+    margin-left: 0;           /* Headers could be at the margin edge */
+}
+
+.content p, .content ol, .content ul {
+    margin-left: 20px;        /* Additional indentation for paragraphs and lists */
+    margin-bottom: 16px;      /* Add bottom margin to paragraphs and lists */
+}
+
+/* Map Styling */
+.custom-map-height {
+    height: 1000px;
+    transition: opacity 0.5s ease;
+}
+
+.province-buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.province-btn {
+    padding: 12px 25px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 16px;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+}
+
+.province-btn:hover {
+    background-color: #2980b9;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 10px rgba(0,0,0,0.15);
+}
+
+.province-btn.active {
+    background-color: #F27D0C;
+    transform: translateY(1px);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.map-content-9 {
+    box-shadow: 0 0 20px rgba(0,0,0,0.15);
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+}
+
+.map-title {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #2c3e50;
+    font-weight: bold;
+}
+
+.loading-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255,255,255,0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.loading-overlay.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.spinner {
+    width: 50px;
+    height: 50px;
+    border: 5px solid #f3f3f3;
+    border-top: 5px solid #3498db;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Tab specific styling */
+#myTab {
+    margin-bottom: 20px;
+}
+
+.tab-content {
+    padding: 20px 0;
+}
+
+/* This is important for tabs */
+.tab-pane.active {
+    display: block !important;
+}
+
+/* Fix for map display in tabs */
+.tab-pane iframe {
+    display: block;
+    width: 100%;
+}
+
+/* Placeholder map background */
+#calabarzon-map {
+    background-color: #f8f9fa;
+}
+
+/* Search Bar Styling */
+.search-container {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+#search-location {
+    flex-grow: 1;
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+#search-button {
+    padding: 10px 20px;
+    background-color: #F27D0C;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+#search-notice {
+    margin-top: 5px;
+    font-size: 14px;
+    color: #555;
+}
+
+#back-to-province-map {
+    background-color: #6c757d;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+#back-to-province-map:hover {
+    background-color: #5a6268;
+}
+/* end of map styling */
+
+/* Search Bar Styling */
+.search-container {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+#search-location {
+    flex-grow: 1;
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+#search-button {
+    padding: 10px 20px;
+    background-color: #F27D0C;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+#search-button:hover {
+    background-color: #d66c0a;
+    transform: translateY(-2px);
+    box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+}
+.about-section {
+    position: relative;
+    padding: 2rem;
+    overflow: hidden;
+    background: #fff;
+}
+
+.about-section .watermark-image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 80%;
+    max-width: 500px;
+    transform: translate(-50%, -50%);
+    opacity: 0.1;
+    z-index: 0;
+}
+
+
+
+.about-section .section-content {
+    position: relative;
+    z-index: 1;
+}
+
+.section-title {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.mission-list li {
+    margin: 0.5rem 0;
+}

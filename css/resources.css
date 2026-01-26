@@ -1,0 +1,292 @@
+    /* Entire header background */
+    #site-header {
+        background-color: #063FA1; /* Deep blue background */
+    }
+
+  /* Navbar background */
+    #site-header .navbar {
+        background-color: #063FA1; /* Deep blue background */
+    }
+
+    /* Adjust the 'NSC SL' text to white */
+    #site-header .navbar-brand .sublog {
+        color: white; /* White for 'NSC' */
+    }
+    #site-header .navbar-brand {
+        color: white; /* White for 'SL' */
+    }
+
+    /* Style the nav links to white */
+    #site-header .navbar .nav-link {
+        color: white; /* White text for nav links */
+    }
+
+    /* Active link color */
+    #site-header .navbar .nav-link.active {
+        color: #f0f0f0; /* Slightly off-white for active links */
+    }
+
+    /* Optional: Adjust padding or other styles */
+    #site-header .navbar {
+        padding: 15px 0;
+    }
+
+
+    /* Optional: Adjust padding or other styles */
+    #site-header .navbar {
+        padding: 15px 0;
+    }
+
+
+    /* styling for the nav links */
+    /* Underline for the active page */
+    .navbar-nav .nav-link.active {
+        position: relative;
+        color: white; /* Text color for the active link */
+        text-decoration: none;
+    }
+
+    .navbar-nav .nav-link.active::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 2px;
+        background-color: currentColor; /* Inherit the color of the link */
+        width: 100%;
+    }
+
+    /* Animated underline on hover */
+    .navbar-nav .nav-link {
+        position: relative;
+        display: inline-block;
+        color: white; /* Link text color */
+        text-decoration: none;
+    }
+
+    .navbar-nav .nav-link::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 2px;
+        background-color: currentColor; /* Inherit the color of the link */
+        width: 0;
+        transition: width 0.3s ease-in-out; /* Smooth animation */
+    }
+
+    .navbar-nav .nav-link:hover::after {
+        width: 100%; /* Full underline on hover */
+    }
+
+    /* Dropdown menu styling */
+    .dropdown-menu {
+        background-color: white; /* Default background color of the dropdown */
+        border: none; /* Remove default border */
+    }
+
+    /* Dropdown menu item hover effect */
+    .dropdown-menu .dropdown-item:hover {
+        background-color: #063FA1; /* Deep blue background on hover */
+        color: white; /* White text on hover */
+    }
+
+    /* Optional: Adjust padding or spacing */
+    .navbar-nav .nav-item {
+        margin-right: 15px; /* Space between items */
+    }
+
+/* Base Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f7f7;
+    color: #333;
+}
+
+/* Section Styles */
+.category {
+    margin-bottom: 40px;
+}
+
+h2 {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+/* File List */
+.file-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+/* File Card */
+.file-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.file-card img {
+    max-width: 50px;
+    margin-bottom: 10px;
+}
+
+.file-card p {
+    font-size: 16px;
+    font-weight: 500;
+    margin: 0;
+}
+
+/* Hover Effects */
+.file-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .file-list {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .file-list {
+        grid-template-columns: 1fr;
+    }
+}
+
+h2 { 
+
+    font-weight: 600; 
+}
+
+.file-list { 
+    display: grid; 
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); 
+    gap: 20px; 
+}
+
+.file-card {
+    background: #fff; 
+    border-radius: 8px; 
+    padding: 20px; 
+    text-align: center; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    transition: 0.3s; 
+}
+
+.file-card:hover { 
+    transform: translateY(-5px); 
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); 
+}
+
+.file-card i {
+    font-size: 2rem; margin-bottom: 10px;
+}
+
+.btn-primary {
+    background-color: #063FA1; border: none; 
+}
+    
+.btn-primary:hover {
+    background-color: #042c7f;
+}
+
+footer h4, footer h5 {
+    font-weight: bold !important; /* Titles will be bold */
+    font-size: 1.2rem; /* Adjust title size */
+    text-align: center;
+}
+
+footer p, footer a{
+    color: #ffffff !important;
+    font-size: 0.9rem; /* Makes text smaller */
+    font-weight: normal !important; /* Ensures text is NOT bold */
+}
+
+footer a:hover {
+    color: #FFD700 !important; /* Gold on hover */
+}
+
+footer .contact-info {
+    opacity: 1 !important;
+}
+
+.email-link, .location-link {
+    text-decoration: none !important;
+    color: white !important; /* Ensures visibility */
+}
+
+.email-link:hover, .location-link:hover {
+    color: #FFD700 !important; /* Changes color on hover */
+}
+
+
+/* link */
+.accordion-link {
+    display: inline-block; /* Changed from block to inline-block */
+    margin: 10px 0 0 60px;
+    padding: 2px 0;
+    text-decoration: none;
+    color: inherit;
+    position: relative;
+}
+
+.accordion-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 1px;
+    bottom: 0;
+    left: 0;
+    background-color: #4C90E4;
+    transition: width 0.3s ease-in-out;
+}
+
+.accordion-link:hover::after {
+    width: 100%;
+}
+
+/* If you want spacing between links */
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+.accordion-item button[aria-expanded="true"] + .accordion-content {
+    max-height: 1000px; /* Big enough to fit long content */
+    overflow: visible;
+}
+
+/* english tagalog */
+.accordion-link1{
+    text-decoration: none;
+    color: inherit;
+    position: relative;
+}
+
+.accordion-link1::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 1px;
+    bottom: 0;
+    left: 0;
+    background-color: currentColor;
+    transition: width 0.3s ease-in-out;
+}
+
+.accordion-link1:hover::after {
+    width: 100%;
+}

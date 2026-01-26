@@ -1,0 +1,520 @@
+    /* Entire header background */
+    #site-header {
+        background-color: #063FA1; /* Deep blue background */
+    }
+
+  /* Navbar background */
+    #site-header .navbar {
+        background-color: #063FA1; /* Deep blue background */
+    }
+
+    /* Adjust the 'NSC SL' text to white */
+    #site-header .navbar-brand .sublog {
+        color: white; /* White for 'NSC' */
+    }
+    #site-header .navbar-brand {
+        color: white; /* White for 'SL' */
+    }
+
+    /* Style the nav links to white */
+    #site-header .navbar .nav-link {
+        color: white; /* White text for nav links */
+    }
+
+    /* Active link color */
+    #site-header .navbar .nav-link.active {
+        color: #f0f0f0; /* Slightly off-white for active links */
+    }
+
+    /* Optional: Adjust padding or other styles */
+    #site-header .navbar {
+        padding: 15px 0;
+    }
+
+
+    /* Optional: Adjust padding or other styles */
+    #site-header .navbar {
+        padding: 15px 0;
+    }
+
+
+    /* styling for the nav links */
+    /* Underline for the active page */
+    .navbar-nav .nav-link.active {
+        position: relative;
+        color: white; /* Text color for the active link */
+        text-decoration: none;
+    }
+
+    .navbar-nav .nav-link.active::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 2px;
+        background-color: currentColor; /* Inherit the color of the link */
+        width: 100%;
+    }
+
+    /* Animated underline on hover */
+    .navbar-nav .nav-link {
+        position: relative;
+        display: inline-block;
+        color: white; /* Link text color */
+        text-decoration: none;
+    }
+
+    .navbar-nav .nav-link::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 2px;
+        background-color: currentColor; /* Inherit the color of the link */
+        width: 0;
+        transition: width 0.3s ease-in-out; /* Smooth animation */
+    }
+
+    .navbar-nav .nav-link:hover::after {
+        width: 100%; /* Full underline on hover */
+    }
+
+    /* Dropdown menu styling */
+    .dropdown-menu {
+        background-color: white; /* Default background color of the dropdown */
+        border: none; /* Remove default border */
+    }
+
+    /* Dropdown menu item hover effect */
+    .dropdown-menu .dropdown-item:hover {
+        background-color: #063FA1; /* Deep blue background on hover */
+        color: white; /* White text on hover */
+    }
+
+    /* Optional: Adjust padding or spacing */
+    .navbar-nav .nav-item {
+        margin-right: 15px; /* Space between items */
+    }
+
+/* Base Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f7f7;
+    color: #333;
+}
+
+/* Section Styles */
+.category {
+    margin-bottom: 40px;
+}
+
+h2 {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+/* File List */
+.file-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+/* File Card */
+.file-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.file-card img {
+    max-width: 50px;
+    margin-bottom: 10px;
+}
+
+.file-card p {
+    font-size: 16px;
+    font-weight: 500;
+    margin: 0;
+}
+
+/* Hover Effects */
+.file-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .file-list {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .file-list {
+        grid-template-columns: 1fr;
+    }
+}
+footer h4, footer h5 {
+    font-weight: bold !important; /* Titles will be bold */
+    font-size: 1.2rem; /* Adjust title size */
+    text-align: center;
+}
+
+footer p, footer a{
+    color: #ffffff !important;
+    font-size: 0.9rem; /* Makes text smaller */
+    font-weight: normal !important; /* Ensures text is NOT bold */
+}
+
+footer a:hover {
+    color: #FFD700 !important; /* Gold on hover */
+}
+
+footer .contact-info {
+    opacity: 1 !important;
+}
+
+.email-link, .location-link {
+    text-decoration: none !important;
+    color: white !important; /* Ensures visibility */
+}
+
+.email-link:hover, .location-link:hover {
+    color: #FFD700 !important; /* Changes color on hover */
+}
+
+/* memo */
+.year-tabs-container {
+    max-width: 1200px;
+    margin: 0 auto 50px;
+}
+
+.year-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.year-tab {
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+    color: #495057;
+    padding: 12px 22px;
+    border-radius: 30px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.year-tab:hover {
+    background-color: #e9ecef;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.year-tab.active {
+    background-color: #063FA1;
+    color: white;
+    border-color: #063FA1;
+    box-shadow: 0 4px 10px rgba(6, 63, 161, 0.3);
+}
+
+.decade-dropdown {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.decade-select {
+    padding: 10px 20px;
+    border-radius: 25px;
+    border: 1px solid #ced4da;
+    background-color: white;
+    color: #063FA1;
+    font-weight: 500;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    min-width: 200px;
+}
+
+.tab-content {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    padding: 30px;
+}
+
+/*
+.memo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.memo-card {
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    padding: 20px;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    border-left: 4px solid #063FA1;
+}
+
+.memo-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+}
+
+.memo-title {
+    font-weight: 600;
+    color: #063FA1;
+    margin-bottom: 10px;
+}
+
+.memo-date {
+    font-size: 0.9rem;
+    color: #6c757d;
+    margin-bottom: 10px;
+}
+
+.memo-actions {
+    margin-top: 15px;
+    display: flex;
+    gap: 15px;
+}
+
+.memo-view, .memo-download {
+    display: flex;
+    align-items: center;
+    color: #063FA1;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.memo-view i, .memo-download i {
+    margin-right: 8px;
+}
+
+.memo-view:hover, .memo-download:hover {
+    text-decoration: underline;
+    transform: translateY(-2px);
+}
+
+.memo-view {
+    color: #28a745;
+}
+
+.memo-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.7);
+    z-index: 1000;
+    overflow: auto;
+}
+
+.memo-modal-content {
+    background-color: white;
+    margin: 5% auto;
+    padding: 20px;
+    width: 80%;
+    max-width: 900px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    position: relative;
+}
+
+.memo-modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #dee2e6;
+}
+
+.memo-modal-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #063FA1;
+}
+
+.memo-close {
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.memo-close:hover {
+    color: #063FA1;
+}
+
+.memo-modal-body {
+    max-height: 70vh;
+    overflow-y: auto;
+    padding: 15px;
+    background-color: #f8f9fa;
+    border-radius: 5px;
+}
+
+.memo-modal-footer {
+    margin-top: 20px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.memo-modal-btn {
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-weight: 500;
+    cursor: pointer;
+    border: none;
+}
+
+.memo-download-btn {
+    background-color: #063FA1;
+    color: white;
+}
+
+.memo-download-btn:hover {
+    background-color: #052d73;
+}
+*/
+
+/* For mobile responsiveness */
+@media (max-width: 767.98px) {
+    .year-tab {
+        padding: 8px 16px;
+        font-size: 0.9rem;
+    }
+    
+    .tab-content {
+        padding: 20px 15px;
+    }
+}
+
+  /* Tab Content Styling from your CSS */
+  .tab-content {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    padding: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Year Tabs Container */
+.year-tabs-container {
+    max-width: 1200px;
+    margin: 0 auto 50px;
+}
+
+/* Demo Header (just for this example) */
+.header-demo {
+    background-color: #063FA1;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.header-demo h1 {
+    margin: 0;
+    font-weight: 600;
+}
+
+/* New Memo List Styling */
+.resources-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.resources-list li {
+    padding: 14px 0;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.resources-list li:last-child {
+    border-bottom: none;
+}
+
+/* Enhanced Link Styling with Left-to-Right Animation */
+.resources-link {
+    color: #063FA1;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 15px;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 4px;
+    transition: color 0.3s ease;
+}
+
+.resources-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #063FA1;
+    transition: width 0.3s ease-in-out;
+}
+
+.resources-link:hover {
+    color: #042a6d;
+}
+
+.resources-link:hover::after {
+    width: 100%;
+}
+
+/* Section heading */
+.section-heading {
+    color: #063FA1;
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 25px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #e9ecef;
+}
+
+/* Memo ID/Date styling */
+.memo-id {
+    color: #6c757d;
+    font-size: 14px;
+    font-weight: 500;
+    width: 200px;
+    display: inline-block;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .resources-list li {
+        padding: 12px 0;
+    }
+    
+    .memo-id {
+        display: block;
+        width: 100%;
+        margin-bottom: 5px;
+    }
+}

@@ -1,0 +1,211 @@
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: black;
+}
+
+.carousel-indicators li {
+    background-color: black;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.9);
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+    .close:hover,
+    .close:focus {
+        color: #999;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+  /* Entire header background */
+  #site-header {
+    background-color: #063FA1; /* Deep blue background */
+}
+
+/* Navbar background */
+#site-header .navbar {
+    background-color: #063FA1; /* Deep blue background */
+}
+
+/* Adjust the 'NSC SL' text to white */
+#site-header .navbar-brand .sublog {
+    color: white; /* White for 'NSC' */
+}
+#site-header .navbar-brand {
+    color: white; /* White for 'SL' */
+}
+
+/* Style the nav links to white */
+#site-header .navbar .nav-link {
+    color: white; /* White text for nav links */
+}
+
+/* Active link color */
+#site-header .navbar .nav-link.active {
+    color: #f0f0f0; /* Slightly off-white for active links */
+}
+
+/* Optional: Adjust padding or other styles */
+#site-header .navbar {
+    padding: 15px 0;
+}
+
+
+/* Optional: Adjust padding or other styles */
+#site-header .navbar {
+    padding: 15px 0;
+}
+
+
+/* styling for the nav links */
+/* Underline for the active page */
+.navbar-nav .nav-link.active {
+    position: relative;
+    color: white; /* Text color for the active link */
+    text-decoration: none;
+}
+
+.navbar-nav .nav-link.active::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 2px;
+    background-color: currentColor; /* Inherit the color of the link */
+    width: 100%;
+}
+
+/* Animated underline on hover */
+.navbar-nav .nav-link {
+    position: relative;
+    display: inline-block;
+    color: white; /* Link text color */
+    text-decoration: none;
+}
+
+.navbar-nav .nav-link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 2px;
+    background-color: currentColor; /* Inherit the color of the link */
+    width: 0;
+    transition: width 0.3s ease-in-out; /* Smooth animation */
+}
+
+.navbar-nav .nav-link:hover::after {
+    width: 100%; /* Full underline on hover */
+}
+
+/* Dropdown menu styling */
+.dropdown-menu {
+    background-color: white; /* Default background color of the dropdown */
+    border: none; /* Remove default border */
+}
+
+/* Dropdown menu item hover effect */
+.dropdown-menu .dropdown-item:hover {
+    background-color: #063FA1; /* Deep blue background on hover */
+    color: white; /* White text on hover */
+}
+
+/* Optional: Adjust padding or spacing */
+.navbar-nav .nav-item {
+    margin-right: 15px; /* Space between items */
+}
+    /* Preloader background covering the whole page */
+#preloader {
+position: fixed;
+left: 0;
+top: 0;
+width: 100%;
+height: 100%;
+z-index: 9999;
+background-color: #fff; /* Change color to match your design */
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+/* Circle style */
+.circle {
+width: 100px; /* Adjust size as needed */
+height: 100px; /* Adjust size as needed */
+border-radius: 50%;
+overflow: hidden;
+display: flex;
+justify-content: center;
+align-items: center;
+animation: rotate 2s linear infinite; /* Optional rotation animation */
+}
+
+/* Image style */
+.circle img {
+width: 100%; /* Make image fit the circle */
+height: auto; /* Maintain aspect ratio */
+}
+
+/* Optional rotation animation */
+@keyframes rotate {
+0% { transform: rotate(0deg); }
+100% { transform: rotate(360deg); }
+}
+
+footer h4, footer h5 {
+    font-weight: bold !important; /* Titles will be bold */
+    font-size: 1.2rem; /* Adjust title size */
+    text-align: center;
+}
+
+footer p, footer a{
+    color: #ffffff !important;
+    font-size: 0.9rem; /* Makes text smaller */
+    font-weight: normal !important; /* Ensures text is NOT bold */
+}
+
+footer a:hover {
+    color: #FFD700 !important; /* Gold on hover */
+}
+
+footer .contact-info {
+    opacity: 1 !important;
+}
+
+.email-link, .location-link {
+    text-decoration: none !important;
+    color: white !important; /* Ensures visibility */
+}
+
+.email-link:hover, .location-link:hover {
+    color: #FFD700 !important; /* Changes color on hover */
+}

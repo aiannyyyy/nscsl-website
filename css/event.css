@@ -1,0 +1,428 @@
+.carousel-control-prev-icon,
+        .carousel-control-next-icon {
+            background-color: black;
+        }
+
+        .carousel-indicators li {
+            background-color: black;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            padding-top: 100px;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgb(0,0,0);
+            background-color: rgba(0,0,0,0.9);
+        }
+
+        .modal-content {
+            margin: auto;
+            display: block;
+            width: 80%;
+            max-width: 700px;
+        }
+
+        .close {
+            position: absolute;
+            top: 15px;
+            right: 35px;
+            color: #fff;
+            font-size: 40px;
+            font-weight: bold;
+        }
+
+            .close:hover,
+            .close:focus {
+                color: #999;
+                text-decoration: none;
+                cursor: pointer;
+            }
+
+          /* Entire header background */
+          #site-header {
+            background-color: #063FA1; /* Deep blue background */
+        }
+
+    
+        /* Navbar background */
+        #site-header .navbar {
+            background-color: #063FA1; /* Deep blue background */
+        }
+
+        /* Adjust the 'NSC SL' text to white */
+        #site-header .navbar-brand .sublog {
+            color: white; /* White for 'NSC' */
+        }
+        #site-header .navbar-brand {
+            color: white; /* White for 'SL' */
+        }
+
+        /* Style the nav links to white */
+        #site-header .navbar .nav-link {
+            color: white; /* White text for nav links */
+        }
+
+        /* Active link color */
+        #site-header .navbar .nav-link.active {
+            color: #f0f0f0; /* Slightly off-white for active links */
+        }
+
+        /* Optional: Adjust padding or other styles */
+        #site-header .navbar {
+            padding: 15px 0;
+        }
+
+        /* Optional: Adjust padding or other styles */
+        #site-header .navbar {
+            padding: 15px 0;
+        }
+
+
+        /* Active link color */
+        #site-header .navbar .nav-link.active {
+            color: #f0f0f0; /* Slightly off-white for active links */
+        }
+
+        /* Optional: Adjust padding or other styles */
+        #site-header .navbar {
+            padding: 15px 0;
+        }
+
+
+        /* styling for the nav links */
+        /* Underline for the active page */
+        .navbar-nav .nav-link.active {
+            position: relative;
+            color: white; /* Text color for the active link */
+            text-decoration: none;
+        }
+
+        .navbar-nav .nav-link.active::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            height: 2px;
+            background-color: currentColor; /* Inherit the color of the link */
+            width: 100%;
+        }
+
+        /* Animated underline on hover */
+        .navbar-nav .nav-link {
+            position: relative;
+            display: inline-block;
+            color: white; /* Link text color */
+            text-decoration: none;
+        }
+
+        .navbar-nav .nav-link::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            height: 2px;
+            background-color: currentColor; /* Inherit the color of the link */
+            width: 0;
+            transition: width 0.3s ease-in-out; /* Smooth animation */
+        }
+
+        .navbar-nav .nav-link:hover::after {
+            width: 100%; /* Full underline on hover */
+        }
+
+        /* Dropdown menu styling */
+        .dropdown-menu {
+            background-color: white; /* Default background color of the dropdown */
+            border: none; /* Remove default border */
+        }
+
+        /* Dropdown menu item hover effect */
+        .dropdown-menu .dropdown-item:hover {
+            background-color: #063FA1; /* Deep blue background on hover */
+            color: white; /* White text on hover */
+        }
+
+        /* Optional: Adjust padding or spacing */
+        .navbar-nav .nav-item {
+            margin-right: 15px; /* Space between items */
+        }
+
+    .cta-section {
+        text-align: center;
+        position: relative;
+        padding: 50px 0;
+        color: #FFFFFF;
+    }
+
+    .cta-bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url('/images/join.jpg');
+        background-size: cover;
+        background-position: center;
+        opacity: 0.6;
+    }
+
+    .cta-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(6, 63, 161, 0.6);
+    }
+
+    .cta-section .container {
+        position: relative;
+        z-index: 2;
+    }
+
+    .cta-title {
+        font-size: 2.5em; /* Adjust size as needed */
+        margin-bottom: 20px;
+        font-weight: bold;
+    }
+
+    .cta-description {
+        font-size: 1.2em; /* Adjust size as needed */
+        margin-bottom: 30px;
+        color: #E0E0E0; /* Light gray for better readability */
+    }
+
+    .cta-button {
+        margin: 10px;
+        padding: 10px 20px;
+        font-size: 1.1em;
+        border-radius: 5px;
+        text-decoration: none; /* Remove underline */
+    }
+
+    .cta-button.btn-light {
+        background-color: #FFFFFF; /* Light button color */
+        color: #063FA1; /* Text color */
+    }
+
+    .cta-button.btn-outline-light {
+        border: 2px solid #FFFFFF; /* Outline button color */
+        color: #FFFFFF; /* Text color */
+    }
+
+    .cta-button:hover {
+        opacity: 0.9; /* Slightly dim button on hover */
+    }
+
+        .events-section {
+        padding: 50px 0;
+        background-color: #f9f9f9; /* Light background for contrast */
+    }
+
+    .section-title {
+        text-align: center;
+        font-size: 2em;
+        color: #063FA1;
+        margin-bottom: 30px;
+    }
+        /* Preloader background covering the whole page */
+        #preloader {
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 9999;
+        background-color: #fff; /* Change color to match your design */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* Circle style */
+    .circle {
+        width: 100px; /* Adjust size as needed */
+        height: 100px; /* Adjust size as needed */
+        border-radius: 50%;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        animation: rotate 2s linear infinite; /* Optional rotation animation */
+    }
+
+    /* Image style */
+    .circle img {
+        width: 100%; /* Make image fit the circle */
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    /* Optional rotation animation */
+    @keyframes rotate {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+    }
+
+    footer h4, footer h5 {
+        font-weight: bold !important; /* Titles will be bold */
+        font-size: 1.2rem; /* Adjust title size */
+        text-align: center;
+    }
+    
+    footer p, footer a{
+        color: #ffffff !important;
+        font-size: 0.9rem; /* Makes text smaller */
+        font-weight: normal !important; /* Ensures text is NOT bold */
+    }
+    
+    footer a:hover {
+        color: #FFD700 !important; /* Gold on hover */
+    }
+    
+    footer .contact-info {
+        opacity: 1 !important;
+    }
+    
+    .email-link, .location-link {
+        text-decoration: none !important;
+        color: white !important; /* Ensures visibility */
+    }
+    
+    .email-link:hover, .location-link:hover {
+        color: #FFD700 !important; /* Changes color on hover */
+    }
+
+    /* CTA Section */
+.cta-section {
+    background: #f8f9fa;
+    padding: 60px 20px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.cta-title {
+    font-size: 28px;
+    font-weight: 700;
+    color: #222;
+}
+
+.cta-description {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.cta-button {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background-color: #063FA1;
+    color: #fff;
+    padding: 12px 20px;
+    border-radius: 6px;
+    font-size: 16px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.cta-button i {
+    font-size: 18px;
+}
+
+.cta-button:hover {
+    background-color: #042c78;
+}
+
+.cta-button.outline {
+    background-color: transparent;
+    color: #063FA1;
+    border: 2px solid #063FA1;
+}
+
+.cta-button.outline:hover {
+    background-color: #063FA1;
+    color: #fff;
+}
+
+.cta-subtext {
+    font-size: 14px;
+    color: #777;
+    margin-top: 10px;
+}
+
+.event-box {
+    display: flex;
+    background: #f8f9fa; /* Light gray background */
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px 0;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.event-box.left {
+    flex-direction: row; /* Image on the left */
+}
+
+.event-box.right {
+    flex-direction: row-reverse; /* Image on the right */
+}
+
+.event-img {
+    flex: 1;
+    max-width: 250px; /* Adjust image width */
+    margin: 0 20px;
+}
+
+.event-img img {
+    width: 100%;
+    height: 150px; /* Uniform image size */
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.event-info {
+    flex: 2;
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.event-details {
+    list-style: none;
+    padding: 0;
+}
+
+.event-details li {
+    margin-bottom: 5px;
+}
+
+.btn-style {
+    background: #063FA1; /* Keep button color */
+    color: white;
+}
+
+.fixed-size {
+    width: 250px; /* Set a fixed width for images */
+    height: 150px; /* Set a fixed height for images */
+    object-fit: cover;
+}
+
+
+    

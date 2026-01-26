@@ -1,0 +1,270 @@
+#pdf-container {
+    width: 50%;
+    max-width: 700px; /* Increased width for larger display */
+    margin: auto;
+    text-align: center;
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+    canvas {
+    width: 50%;
+    height: auto;
+    max-height: none; /* Remove height limitation */
+    display: block;
+    margin: auto;
+    }
+
+    #announcement-title {
+        text-align: center;
+        font-size: 20px;
+        font-weight: bold;
+        margin-top: 15px;
+    }
+
+    .announcement-text {
+    text-align: center;
+    color: black; /* Set font color to black */
+    padding-top: 10px; /* Adds spacing between PDF and text */
+    font-size: 18px; /* Adjust font size if needed */
+}
+
+
+    #pdfCarousel {
+        margin-bottom: 50px; /* Adjust the spacing */
+    }
+      /* Entire header background */
+    #site-header {
+        background-color: #063FA1; /* Deep blue background */
+    }
+
+  /* Navbar background */
+    #site-header .navbar {
+        background-color: #063FA1; /* Deep blue background */
+    }
+
+    /* Adjust the 'NSC SL' text to white */
+    #site-header .navbar-brand .sublog {
+        color: white; /* White for 'NSC' */
+    }
+    #site-header .navbar-brand {
+        color: white; /* White for 'SL' */
+    }
+
+    /* Style the nav links to white */
+    #site-header .navbar .nav-link {
+        color: white; /* White text for nav links */
+    }
+
+    /* Active link color */
+    #site-header .navbar .nav-link.active {
+        color: #f0f0f0; /* Slightly off-white for active links */
+    }
+
+    /* Optional: Adjust padding or other styles */
+    #site-header .navbar {
+        padding: 15px 0;
+    }
+
+
+    /* Optional: Adjust padding or other styles */
+    #site-header .navbar {
+        padding: 15px 0;
+    }
+
+
+    /* styling for the nav links */
+    /* Underline for the active page */
+    .navbar-nav .nav-link.active {
+        position: relative;
+        color: white; /* Text color for the active link */
+        text-decoration: none;
+    }
+
+    .navbar-nav .nav-link.active::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 2px;
+        background-color: currentColor; /* Inherit the color of the link */
+        width: 100%;
+    }
+
+    /* Animated underline on hover */
+    .navbar-nav .nav-link {
+        position: relative;
+        display: inline-block;
+        color: white; /* Link text color */
+        text-decoration: none;
+    }
+
+    .navbar-nav .nav-link::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 2px;
+        background-color: currentColor; /* Inherit the color of the link */
+        width: 0;
+        transition: width 0.3s ease-in-out; /* Smooth animation */
+    }
+
+    .navbar-nav .nav-link:hover::after {
+        width: 100%; /* Full underline on hover */
+    }
+
+    /* Dropdown menu styling */
+    .dropdown-menu {
+        background-color: white; /* Default background color of the dropdown */
+        border: none; /* Remove default border */
+    }
+
+    /* Dropdown menu item hover effect */
+    .dropdown-menu .dropdown-item:hover {
+        background-color: #063FA1; /* Deep blue background on hover */
+        color: white; /* White text on hover */
+    }
+
+    /* Optional: Adjust padding or spacing */
+    .navbar-nav .nav-item {
+        margin-right: 15px; /* Space between items */
+    }
+
+/* Base Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f7f7;
+    color: #333;
+}
+
+/* Section Styles */
+.category {
+    margin-bottom: 40px;
+}
+
+h2 {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+/* File List */
+.file-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+/* File Card */
+.file-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.file-card img {
+    max-width: 50px;
+    margin-bottom: 10px;
+}
+
+.file-card p {
+    font-size: 16px;
+    font-weight: 500;
+    margin: 0;
+}
+
+/* Hover Effects */
+.file-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .file-list {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .file-list {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+h2 { 
+
+    font-weight: 600; 
+}
+
+.file-list { 
+    display: grid; 
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); 
+    gap: 20px; 
+}
+
+.file-card {
+    background: #fff; 
+    border-radius: 8px; 
+    padding: 20px; 
+    text-align: center; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    transition: 0.3s; 
+}
+
+.file-card:hover { 
+    transform: translateY(-5px); 
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); 
+}
+
+.file-card i {
+    font-size: 2rem; margin-bottom: 10px;
+}
+
+.btn-primary {
+    background-color: #063FA1; border: none; 
+}
+    
+.btn-primary:hover {
+    background-color: #042c7f;
+}
+
+footer h4, footer h5 {
+    font-weight: bold !important; /* Titles will be bold */
+    font-size: 1.2rem; /* Adjust title size */
+    text-align: center;
+}
+
+footer p, footer a{
+    color: #ffffff !important;
+    font-size: 0.9rem; /* Makes text smaller */
+    font-weight: normal !important; /* Ensures text is NOT bold */
+}
+
+footer a:hover {
+    color: #FFD700 !important; /* Gold on hover */
+}
+
+footer .contact-info {
+    opacity: 1 !important;
+}
+
+.email-link, .location-link {
+    text-decoration: none !important;
+    color: white !important; /* Ensures visibility */
+}
+
+.email-link:hover, .location-link:hover {
+    color: #FFD700 !important; /* Changes color on hover */
+}
+

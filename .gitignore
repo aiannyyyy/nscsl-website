@@ -1,0 +1,103 @@
+# =============================
+# ENVIRONMENT VARIABLES (SECRETS)
+# =============================
+.env
+.env.*
+*.env
+
+# Allow example env
+!.env.example
+
+# =============================
+# IMPORTANT DATA FILES - DO NOT PUSH
+# =============================
+# CSV files (important data)
+*.csv
+
+# Files and Images folders
+files/
+images/
+
+# =============================
+# PYTHON FILES
+# =============================
+*.pyc
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+dist/
+build/
+
+# =============================
+# NODE DEPENDENCIES (if any)
+# =============================
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# =============================
+# EXCEL FILES (may contain sensitive data)
+# =============================
+*.xlsx
+*.xls
+
+# =============================
+# JSON DATA FILES (if they contain sensitive data)
+# =============================
+*.json
+# But allow package.json and config files if needed
+!package.json
+!package-lock.json
+!tsconfig*.json
+
+# =============================
+# LOG FILES
+# =============================
+logs/
+*.log
+
+# =============================
+# OS FILES
+# =============================
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# =============================
+# EDITOR FILES
+# =============================
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.swp
+*~
+
+# =============================
+# BACKUP FILES
+# =============================
+*.bak
+*.backup
+*-backup.*
+*.old
+
+# =============================
+# TEMP FILES
+# =============================
+temp/
+tmp/
+*.tmp
+
+# =============================
+# DATABASE FILES
+# =============================
+*.sqlite
+*.sqlite3
+*.db
+"@ | Out-File -FilePath .gitignore -Encoding UTF8
