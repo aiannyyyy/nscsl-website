@@ -1,8 +1,12 @@
+import os
+
 import pandas as pd
 import requests
 
-# Keep your API key private; replace with your actual key
-API_KEY = '8b715eb415854310998d44ff348f8c32'  # Replace with your OpenCage API key
+# Read the OpenCage key from the environment; never commit it.
+API_KEY = os.environ.get('OPENCAGE_API_KEY', '')
+if not API_KEY:
+    raise SystemExit('Set OPENCAGE_API_KEY before running this script.')
 
 # Function to get Google Maps link from OpenCage Geocoding API
 def get_google_maps_link(address):
